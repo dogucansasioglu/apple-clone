@@ -28,6 +28,7 @@ const Product: FC<Props> = ({ product }: Props) => {
           layout="fill"
           objectFit="contain"
           // placeholder="blur"
+          alt=""
         />
       </div>
 

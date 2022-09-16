@@ -37,7 +37,7 @@ const Checkout = () => {
     setGroupedItemsInBasket(groupedItems);
 
     // return () => {};
-  }, []);
+  }, [items]);
 
   const createCheckoutSession = async () => {
     setLoading(true);

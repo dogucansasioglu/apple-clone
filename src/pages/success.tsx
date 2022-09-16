@@ -43,7 +43,7 @@ const Success = ({ products }: Props) => {
       <header className="mx-auto max-w-xl">
         <Link href="/">
           <div className="relative ml-4 h-16 w-8 cursor-pointer opacity-75 transition hover:opacity-100 lg:hidden">
-            <Image src="/logo.png" layout="fill" objectFit="contain" />
+            <Image src="/logo.png" layout="fill" objectFit="contain" alt="" />
           </div>
         </Link>
       </header>
@@ -52,7 +52,7 @@ const Success = ({ products }: Props) => {
         <section className="order-2 mx-auto max-w-xl pb-12 lg:col-span-5 lg:mx-0 lg:max-w-none lg:pr-16 lg:pt-16 xl:pl-16 2xl:pl-44">
           <Link href="/">
             <div className="relative ml-4 hidden h-16 w-8 cursor-pointer opacity-75 transition hover:opacity-100 lg:inline-flex">
-              <Image src="/logo.png" layout="fill" objectFit="contain" />
+              <Image src="/logo.png" layout="fill" objectFit="contain" alt="" />
             </div>
           </Link>
 
@@ -75,8 +75,8 @@ const Success = ({ products }: Props) => {
             <div className="space-y-2 pb-3">
               <p>Your order is confirmed</p>
               <p className="text-sm text-gray-600">
-                We've accepted your order, and we're getting it ready. Come back
-                to this page for updates on yourshipment status.
+                We&apos;ve accepted your order, and we&apos;re getting it ready.
+                Come back to this page for updates on your shipment status.
               </p>
             </div>
             <div className="pt-3 text-sm">
@@ -90,7 +90,7 @@ const Success = ({ products }: Props) => {
           <div className="my-4 mx-4 space-y-2 rounded-md border border-gray-300 p-4 lg:ml-14">
             <p>Order updates</p>
             <p className="text-sm text-gray-600">
-              You'll get shipping and delivery updates by email and text
+              You&apos;ll get shipping and delivery updates by email and text
             </p>
           </div>
 
@@ -144,6 +144,7 @@ const Success = ({ products }: Props) => {
                           src="/logo.png"
                           layout="fill"
                           objectFit="contain"
+                          alt=""
                         />
                       </div>
                       <div className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-[gray] text-xs">
