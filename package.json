@@ -9,16 +9,33 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.1",
+    "@heroicons/react": "^2.0.11",
+    "@portabletext/react": "^1.0.6",
+    "@reduxjs/toolkit": "^1.8.5",
+    "@sanity/image-url": "^1.0.1",
+    "@stripe/stripe-js": "^1.36.0",
     "next": "12.3.0",
+    "next-auth": "^4.10.3",
+    "next-auth-sanity": "^1.4.4",
+    "next-sanity": "^0.8.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-hot-toast": "^2.4.0",
+    "react-redux": "^8.0.2",
+    "stripe": "^10.10.0"
   },
   "devDependencies": {
     "@types/node": "18.7.18",
     "@types/react": "18.0.20",
     "@types/react-dom": "18.0.6",
+    "autoprefixer": "^10.4.11",
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.0",
+    "postcss": "^8.4.16",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "tailwindcss": "^3.1.8",
     "typescript": "4.8.3"
   }
 }
