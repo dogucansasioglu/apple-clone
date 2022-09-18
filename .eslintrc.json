@@ -20,7 +20,7 @@
       "files": ["*.stories.@(.ts|tsx|js|jsx|mjs|cjs)"],
       "rules": {
         // example
-        "storybook/hierarchy-seperator": "error"
+        "storybook/hierarchy-seperator": "off"
       }
     }
   ]
