@@ -1,4 +1,4 @@
-import Header from '../../Header';
+import Header from '../../navigation/header/Header';
 
 export interface IPrimaryLayout {
   children: React.ReactNode;

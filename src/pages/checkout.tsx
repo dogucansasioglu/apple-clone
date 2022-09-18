@@ -1,13 +1,12 @@
+import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import Head from 'next/head';
-import Header from '../components/Header';
-import { useSelector } from 'react-redux';
-import { selectBasketItems, selectBasketTotal } from '../store/basketSlice';
-import Button from '../components/Button';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import CheckoutProduct from '../components/CheckoutProduct';
-import { ChevronDownIcon } from '@heroicons/react/24/outline';
+import { useSelector } from 'react-redux';
 import Stripe from 'stripe';
+import Button from '../components/Button';
+import CheckoutProduct from '../components/CheckoutProduct';
+import { selectBasketItems, selectBasketTotal } from '../store/basketSlice';
 import { fetchPostJSON } from '../utils/apiHelpers';
 import getStripe from '../utils/getStripe';
 
@@ -72,7 +71,6 @@ const Checkout = () => {
         <title>Bag - Apple</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
 
       <main className="mx-auto max-w-5xl pb-24">
         <div className="px-5">

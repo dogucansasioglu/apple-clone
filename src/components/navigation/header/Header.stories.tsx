@@ -1,9 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { SessionProvider } from 'next-auth/react';
-import { Provider } from 'react-redux';
-import { store } from '../../../store/store';
-import PrimaryLayout, { IPrimaryLayout } from './PrimaryLayout';
-import { mockPrimaryLayoutProps } from './PrimaryLayout.mocks';
+import Header from './Header';
+import { mockHeaderProps } from './Header.mocks';
 
 const session = {
   expires: '2023-10-01T12:00:00.000Z',
@@ -17,18 +15,16 @@ const session = {
 };
 
 export default {
-  title: 'layouts/PrimaryLayout',
-  component: PrimaryLayout,
+  title: 'navigation/Header',
+  component: Header,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},
-} as ComponentMeta<typeof PrimaryLayout>;
+} as ComponentMeta<typeof Header>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof PrimaryLayout> = (args) => (
+const Template: ComponentStory<typeof Header> = () => (
   <SessionProvider session={session}>
-    <Provider store={store}>
-      <PrimaryLayout {...args} />
-    </Provider>
+    <Header />
   </SessionProvider>
 );
 
@@ -36,5 +32,5 @@ export const Base = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 
 Base.args = {
-  ...mockPrimaryLayoutProps.base,
-} as IPrimaryLayout;
+  ...mockHeaderProps.base,
+};
