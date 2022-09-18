@@ -1,5 +1,6 @@
 {
   "extends": [
+    "plugin:storybook/recommended",
     "next",
     "next/core-web-vitals",
     "eslint:recommended",
@@ -13,5 +14,14 @@
   },
   "rules": {
     "no-used-vars": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.stories.@(.ts|tsx|js|jsx|mjs|cjs)"],
+      "rules": {
+        // example
+        "storybook/hierarchy-seperator": "error"
+      }
+    }
+  ]
 }
