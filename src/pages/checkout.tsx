@@ -51,18 +51,17 @@ const Checkout = () => {
     console.log(checkoutSession);
 
     if (checkoutSession) {
-      if ((checkoutSession as any).statusCode === 500) {
-        console.error((checkoutSession as any).message);
+      if (checkoutSession.mode !== 'payment') {
         setLoading(false);
         return;
       }
 
       const stripe = await getStripe();
-      const { error } = await stripe!.redirectToCheckout({
-        sessionId: checkoutSession.id,
-      });
-
-      console.warn(error.message);
+      if (stripe) {
+        stripe.redirectToCheckout({ sessionId: checkoutSession.id });
+      } else {
+        console.error('Stripe is not loaded');
+      }
     }
     setLoading(false);
   };

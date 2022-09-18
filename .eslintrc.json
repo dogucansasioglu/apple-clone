@@ -1,9 +1,17 @@
 {
-  "extends": ["next", "next/core-web-vitals", "eslint:recommended"],
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "root": true,
   "globals": {
     "React": "readonly"
   },
   "rules": {
-    "no-used-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }]
+    "no-used-vars": "off"
   }
 }

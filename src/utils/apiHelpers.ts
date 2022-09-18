@@ -1,4 +1,7 @@
-export async function fetchPostJSON(url: string, data?: {}) {
+export async function fetchPostJSON(
+  url: string,
+  data?: Record<string, unknown>
+) {
   try {
     const res = await fetch(url, {
       method: 'POST',
@@ -14,10 +17,9 @@ export async function fetchPostJSON(url: string, data?: {}) {
     });
     return await res.json();
   } catch (error) {
-    // if (error instanceof Error) {
-    //   throw new Error(error.message);
-    // }
-    // throw error;
-    console.log(error);
+    if (error instanceof Error) {
+      throw new Error(error.message);
+    }
+    throw error;
   }
 }
