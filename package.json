@@ -8,7 +8,7 @@
     "npm": ">=7.0.0"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -41,6 +41,7 @@
     "@typescript-eslint/eslint-plugin": "^5.37.0",
     "@typescript-eslint/parser": "^5.37.0",
     "autoprefixer": "^10.4.11",
+    "cross-env": "^7.0.3",
     "eslint": "^8.23.1",
     "eslint-config-next": "12.3.0",
     "husky": "^8.0.1",

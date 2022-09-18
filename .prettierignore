@@ -1,5 +1,4 @@
 .next
 .dist
 node_modules
-apple-clone/node_modules
-apple-clone/dist
+apple-clone
