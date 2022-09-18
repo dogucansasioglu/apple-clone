@@ -2,8 +2,8 @@ import { Tab } from '@headlessui/react';
 import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import Basket from '../components/Basket';
-import PromoCard from '../components/cards/promo/Promo';
-import Landing from '../components/Landing';
+import PromoCard from '../components/cards/promo/PromoCard';
+import HomeHero from '../components/heroes/home/HomeHero';
 import { fetchCategories } from '../utils/fetchCategories';
 import { fetchProducts } from '../utils/fetchProducts';
 
@@ -32,8 +32,8 @@ const Home = ({ categories, products }: Props) => {
 
       <Basket />
 
-      <main className="relative h-[200vh] bg-[#E7ECEE] ">
-        <Landing />
+      <main className="relative h-[200vh]">
+        <HomeHero />
       </main>
 
       <section className="relative z-40 -mt-[100vh] min-h-screen bg-[#1b1b1b]">

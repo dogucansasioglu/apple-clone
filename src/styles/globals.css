@@ -6,30 +6,40 @@
 
 @layer base {
   html {
-    @apply font-body text-[#232428];
+    /* @apply font-body text-[#232428]; */
+    @apply font-body text-gray-800;
   }
 }
 
 @layer components {
-  .headerLink {
-    @apply cursor-pointer opacity-75 transition hover:opacity-100;
+  .transition-300 {
+    @apply transition duration-300 ease-in-out;
   }
   .headerIcon {
-    @apply h-8 w-8 cursor-pointer opacity-75 transition hover:opacity-100;
+    @apply transition-300 h-8 w-8 cursor-pointer text-gray-800 hover:text-violet-500;
   }
-  .bg-gradient-pink-violet {
+  .bg-gpv5 {
     @apply bg-gradient-to-r from-pink-500 to-violet-500;
   }
+  .bg-gpv6 {
+    @apply bg-gradient-to-r from-pink-600 to-violet-600;
+  }
   .link {
-    @apply relative cursor-pointer text-lg font-medium before:absolute before:inset-x-0 before:-bottom-1.5 before:h-0.5 before:origin-left before:scale-x-0 before:transform before:rounded-bl before:bg-black before:transition-all before:duration-200 before:ease-in-out hover:before:scale-x-100;
+    @apply relative cursor-pointer text-lg font-medium before:absolute before:inset-x-0 before:-bottom-1.5 before:h-0.5 before:origin-left before:scale-x-0 before:transform before:rounded-bl before:bg-black before:transition-all before:duration-200 before:ease-in-out hover:before:scale-x-100 xl:text-xl;
+  }
+  .primaryButton {
+    @apply transition-300 bg-gpv5 rounded-lg px-6 py-3 text-lg font-semibold text-white hover:opacity-90  md:px-8 md:py-4 xl:text-xl;
   }
   .borderGradient {
-    @apply bg-gradient-pink-violet bg-[length:100%_2px] bg-left-bottom bg-no-repeat pb-[5px] text-center;
+    @apply bg-gpv5 bg-[length:100%_2px] bg-left-bottom bg-no-repeat pb-[5px] text-center;
   }
   .tabPanel {
     @apply grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3;
   }
   .flex-center {
     @apply flex items-center justify-center;
+  }
+  .bg-color {
+    @apply bg-[#e7ecee];
   }
 }

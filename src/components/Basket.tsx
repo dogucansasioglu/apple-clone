@@ -1,7 +1,7 @@
-import { selectBasketItems } from '../store/basketSlice';
-import { useSelector } from 'react-redux';
-import Link from 'next/link';
 import ShoppingBagIcon from '@heroicons/react/24/outline/ShoppingBagIcon';
+import Link from 'next/link';
+import { useSelector } from 'react-redux';
+import { selectBasketItems } from '../store/basketSlice';
 
 const Basket = () => {
   const items = useSelector(selectBasketItems);
@@ -12,7 +12,7 @@ const Basket = () => {
     <Link href="/checkout">
       <div className="fixed bottom-10 right-10 z-50 flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-gray-300">
         {items.length > 0 && (
-          <span className="bg-gradient-pink-violet absolute -right-1 -top-1 z-50 flex h-7 w-7 items-center justify-center rounded-full text-sm text-white">
+          <span className="bg-gpv5 absolute -right-1 -top-1 z-50 flex h-7 w-7 items-center justify-center rounded-full text-sm text-white">
             {items.length}
           </span>
         )}

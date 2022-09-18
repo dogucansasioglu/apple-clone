@@ -1,7 +1,7 @@
 import { Tab } from '@headlessui/react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import PromoCard, { IPromoCard } from './Promo';
-import { mockPromoCardProps } from './Promo.mocks';
+import PromoCard, { IPromoCard } from './PromoCard';
+import { mockPromoCardProps } from './PromoCard.mocks';
 
 export default {
   title: 'cards/PromoCard',

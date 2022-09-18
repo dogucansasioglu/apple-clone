@@ -1,4 +1,4 @@
-import { IPromoCard } from './Promo';
+import { IPromoCard } from './PromoCard';
 
 const base: IPromoCard = {
   product: {

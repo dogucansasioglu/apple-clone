@@ -37,7 +37,7 @@ const PromoCard = ({ product }: IPromoCard) => {
         </div>
 
         <div
-          className="bg-gradient-pink-violet flex h-16 w-16 flex-shrink-0 cursor-pointer items-center justify-center rounded-full md:h-[70px] md:w-[70px]"
+          className="bg-gpv5 flex h-16 w-16 flex-shrink-0 cursor-pointer items-center justify-center rounded-full md:h-[70px] md:w-[70px]"
           onClick={addItemToBasket}
         >
           <ShoppingCartIcon className="h-8 cursor-pointer text-white" />

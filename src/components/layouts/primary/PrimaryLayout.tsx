@@ -6,10 +6,10 @@ export interface IPrimaryLayout {
 
 const PrimaryLayout = ({ children }: IPrimaryLayout) => {
   return (
-    <>
+    <div className="bg-color">
       <Header />
       {children}
-    </>
+    </div>
   );
 };
 

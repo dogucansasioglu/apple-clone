@@ -3,14 +3,13 @@ import { SessionProvider } from 'next-auth/react';
 import Header from './Header';
 
 const session = {
-  expires: '2023-10-01T12:00:00.000Z',
   user: {
-    name: 'John Doe',
-    email: 'johndoe@example.com',
-    image: 'https://links.papareact.com/ua6',
+    name: 'Doğucan Şaşıoğlu',
+    email: 'sasiogludogucan@gmail.com',
+    image:
+      'https://lh3.googleusercontent.com/a/AItbvmk_K6r6brCf5h1y4Bp5NwUV7Jm03suM_1aEqQim=s96-c',
   },
-  accessToken: 'someaccesstoken',
-  idToken: 'someidtoken',
+  expires: '2023-10-18T22:55:34.544Z',
 };
 
 export default {
