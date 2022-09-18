@@ -1,10 +1,10 @@
-import { ShoppingCartIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
-import { FC } from "react";
-import { urlFor } from "../lib/sanity.server";
-import { useDispatch } from "react-redux";
-import { addToBasket } from "../store/basketSlice";
-import toast from "react-hot-toast";
+import { ShoppingCartIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
+import { FC } from 'react';
+import { urlFor } from '../lib/sanity.server';
+import { useDispatch } from 'react-redux';
+import { addToBasket } from '../store/basketSlice';
+import toast from 'react-hot-toast';
 
 interface Props {
   product: Product;
@@ -16,7 +16,7 @@ const Product: FC<Props> = ({ product }: Props) => {
   const addItemToBasket = () => {
     dispatch(addToBasket(product));
     toast.success(`${product.title} added to basket!`, {
-      position: "bottom-center",
+      position: 'bottom-center',
     });
   };
 

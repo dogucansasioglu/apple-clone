@@ -1,14 +1,14 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 import {
   MagnifyingGlassIcon,
   ShoppingBagIcon,
   UserIcon,
-} from "@heroicons/react/24/outline";
-import { selectBasketItems } from "../store/basketSlice";
-import { useSelector } from "react-redux";
-import { signIn, signOut, useSession } from "next-auth/react";
+} from '@heroicons/react/24/outline';
+import { selectBasketItems } from '../store/basketSlice';
+import { useSelector } from 'react-redux';
+import { signIn, signOut, useSession } from 'next-auth/react';
 
 const Header = () => {
   const { data: session } = useSession();

@@ -1,4 +1,4 @@
-import BarcodeInput from './BarcodeInput'
+import BarcodeInput from './BarcodeInput';
 
 export default {
   name: 'barcode',
@@ -48,4 +48,4 @@ export default {
       },
     },
   ],
-}
+};

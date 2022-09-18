@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 interface Props {
   title: string;
@@ -20,7 +20,7 @@ const Button: FC<Props> = ({
   return (
     <button
       className={`ease group relative z-30 box-border inline-flex ${
-        width ? width : "w-auto"
+        width ? width : 'w-auto'
       } ${padding} bg-gradient-pink-violet cursor-pointer items-center justify-center overflow-hidden rounded bg-indigo-600 px-8 py-3 font-bold text-white transition-all duration-300 focus:outline-none`}
       onClick={onClick}
     >
@@ -44,7 +44,7 @@ const Button: FC<Props> = ({
             ></path>
           </svg>
         )}
-        {loading ? "Loading..." : title}
+        {loading ? 'Loading...' : title}
       </span>
     </button>
   );

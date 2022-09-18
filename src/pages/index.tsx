@@ -1,14 +1,14 @@
-import type { GetServerSideProps } from "next";
-import Head from "next/head";
-import Header from "../components/Header";
-import Landing from "../components/Landing";
-import { Tab } from "@headlessui/react";
-import { fetchCategories } from "../utils/fetchCategories";
-import { fetchProducts } from "../utils/fetchProducts";
-import Product from "../components/Product";
-import Basket from "../components/Basket";
-import { getSession } from "next-auth/react";
-import type { Session } from "next-auth";
+import type { GetServerSideProps } from 'next';
+import Head from 'next/head';
+import Header from '../components/Header';
+import Landing from '../components/Landing';
+import { Tab } from '@headlessui/react';
+import { fetchCategories } from '../utils/fetchCategories';
+import { fetchProducts } from '../utils/fetchProducts';
+import Product from '../components/Product';
+import Basket from '../components/Basket';
+import { getSession } from 'next-auth/react';
+import type { Session } from 'next-auth';
 
 interface Props {
   categories: Category[];
@@ -57,8 +57,8 @@ const Home = ({ categories, products, session }: Props) => {
                   className={({ selected }) =>
                     `whitespace-nowrap rounded-t-lg py-3 px-5 text-sm font-light outline-none md:py-4 md:px-6 md:text-base ${
                       selected
-                        ? "borderGradient bg-[#35383c] text-white"
-                        : "border-b-2 border-[#35383c] text-[#747474]"
+                        ? 'borderGradient bg-[#35383c] text-white'
+                        : 'border-b-2 border-[#35383c] text-[#747474]'
                     }`
                   }
                 >

@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
-import PropTypes from 'prop-types'
-import Barcode from 'react-barcode'
-import {FormFieldSet} from '@sanity/base/components'
-import {Box} from '@sanity/ui'
-import {setIfMissing} from '@sanity/form-builder/PatchEvent'
-import {FormBuilderInput} from '@sanity/form-builder/lib/FormBuilderInput'
-import styled from 'styled-components'
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import Barcode from 'react-barcode';
+import { FormFieldSet } from '@sanity/base/components';
+import { Box } from '@sanity/ui';
+import { setIfMissing } from '@sanity/form-builder/PatchEvent';
+import { FormBuilderInput } from '@sanity/form-builder/lib/FormBuilderInput';
+import styled from 'styled-components';
 
 const BarcodeRoot = styled(Box)`
   svg {
@@ -13,19 +13,19 @@ const BarcodeRoot = styled(Box)`
     margin: 1em auto;
     max-width: 100%;
   }
-`
+`;
 
 const FieldWrapper = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 1em;
-`
+`;
 
 const ErrorMessage = styled.div`
   color: #e66666;
   text-align: center;
   padding: 1em;
-`
+`;
 
 const BarcodeInput = React.forwardRef(function BarcodeInput(props, ref) {
   const {
@@ -40,18 +40,22 @@ const BarcodeInput = React.forwardRef(function BarcodeInput(props, ref) {
     onFocus,
     onBlur,
     onChange,
-  } = props
-  const [valid, setValid] = useState(true)
+  } = props;
+  const [valid, setValid] = useState(true);
   const handleFieldChange = React.useCallback(
     (field, patchEvent) => {
-      onChange(patchEvent.prefixAll(field.name).prepend(setIfMissing({_type: type.name})))
+      onChange(
+        patchEvent
+          .prefixAll(field.name)
+          .prepend(setIfMissing({ _type: type.name }))
+      );
     },
     [onChange, type.name]
-  )
+  );
 
   const handleValid = (validState) => {
-    setValid(validState)
-  }
+    setValid(validState);
+  };
 
   return (
     <FormFieldSet
@@ -92,8 +96,8 @@ const BarcodeInput = React.forwardRef(function BarcodeInput(props, ref) {
         ))}
       </FieldWrapper>
     </FormFieldSet>
-  )
-})
+  );
+});
 
 BarcodeInput.propTypes = {
   level: PropTypes.number,
@@ -102,6 +106,6 @@ BarcodeInput.propTypes = {
   type: PropTypes.object,
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
-}
+};
 
-export default BarcodeInput
+export default BarcodeInput;

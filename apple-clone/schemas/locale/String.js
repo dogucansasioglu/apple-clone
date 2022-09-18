@@ -1,4 +1,4 @@
-import supportedLanguages from './supportedLanguages'
+import supportedLanguages from './supportedLanguages';
 
 export default {
   name: 'localeString',
@@ -7,7 +7,7 @@ export default {
     {
       title: 'Translations',
       name: 'translations',
-      options: {collapsible: true},
+      options: { collapsible: true },
     },
   ],
   fields: supportedLanguages.map((lang) => ({
@@ -16,4 +16,4 @@ export default {
     type: 'string',
     fieldset: lang.isDefault ? null : 'translations',
   })),
-}
+};

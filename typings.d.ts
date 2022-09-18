@@ -3,9 +3,9 @@ interface Category {
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
-  _type: "category";
+  _type: 'category';
   slug: {
-    _type: "slug";
+    _type: 'slug';
     current: string;
   };
   title: string;
@@ -16,9 +16,9 @@ interface Product {
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
-  _type: "product";
+  _type: 'product';
   slug: {
-    _type: "slug";
+    _type: 'slug';
     current: string;
   };
   title: string;
@@ -27,16 +27,16 @@ interface Product {
   image: Image[];
   category: {
     _ref: string;
-    _type: "reference";
+    _type: 'reference';
   };
 }
 
 interface Image {
   _key: string;
-  _type: "image";
+  _type: 'image';
   asset: {
     _ref: string;
-    _type: "reference";
+    _type: 'reference';
   };
 }
 

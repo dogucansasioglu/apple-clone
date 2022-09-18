@@ -3,16 +3,16 @@ import {
   ChevronDownIcon,
   ChevronUpIcon,
   ShoppingCartIcon,
-} from "@heroicons/react/24/outline";
-import { GetServerSideProps } from "next";
-import { useSession } from "next-auth/react";
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useState } from "react";
-import Button from "../components/Button";
-import { fetchLineItems } from "../utils/fetchLineItems";
+} from '@heroicons/react/24/outline';
+import { GetServerSideProps } from 'next';
+import { useSession } from 'next-auth/react';
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
+import Button from '../components/Button';
+import { fetchLineItems } from '../utils/fetchLineItems';
 
 interface Props {
   products: StripeProduct[];
@@ -65,8 +65,8 @@ const Success = ({ products }: Props) => {
                 Order #{session_id?.slice(-5)}
               </p>
               <h4 className="text-lg">
-                Thank you{" "}
-                {session ? session.user?.name?.split(" ")[0] : "Guest"}
+                Thank you{' '}
+                {session ? session.user?.name?.split(' ')[0] : 'Guest'}
               </h4>
             </div>
           </div>
@@ -98,7 +98,7 @@ const Success = ({ products }: Props) => {
             <p className="hidden lg:inline">Need help? Contact us!</p>
             <Button
               title="Continue Shopping"
-              onClick={() => router.push("/")}
+              onClick={() => router.push('/')}
               width=" "
               padding="py-4 w-full lg:w-auto"
             />
@@ -108,7 +108,7 @@ const Success = ({ products }: Props) => {
         <section className="overflow-y-scroll border-y border-l border-gray-300 bg-[#fafafa] lg:order-2 lg:col-span-4 lg:h-screen lg:border-y-0">
           <div
             className={`w-full ${
-              showOrderSummary && "border-b"
+              showOrderSummary && 'border-b'
             } border-gray-300 text-sm lg:hidden`}
           >
             <div className="mx-auto flex max-w-xl items-center justify-between px-4 py-6">

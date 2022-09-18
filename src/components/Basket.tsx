@@ -1,7 +1,7 @@
-import { selectBasketItems } from "../store/basketSlice";
-import { useSelector } from "react-redux";
-import Link from "next/link";
-import ShoppingBagIcon from "@heroicons/react/24/outline/ShoppingBagIcon";
+import { selectBasketItems } from '../store/basketSlice';
+import { useSelector } from 'react-redux';
+import Link from 'next/link';
+import ShoppingBagIcon from '@heroicons/react/24/outline/ShoppingBagIcon';
 
 const Basket = () => {
   const items = useSelector(selectBasketItems);

@@ -1,9 +1,9 @@
-import Image from "next/image";
-import { urlFor } from "../lib/sanity.server";
-import { removeFromBasket } from "../store/basketSlice";
-import { useDispatch } from "react-redux";
-import toast from "react-hot-toast";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import Image from 'next/image';
+import { urlFor } from '../lib/sanity.server';
+import { removeFromBasket } from '../store/basketSlice';
+import { useDispatch } from 'react-redux';
+import toast from 'react-hot-toast';
+import { ChevronDownIcon } from '@heroicons/react/24/outline';
 
 interface Props {
   items: Product[];
@@ -17,7 +17,7 @@ function CheckoutProduct({ id, items }: Props) {
     dispatch(removeFromBasket(id));
 
     toast.error(`${items[0].title} removed from basket`, {
-      position: "bottom-center",
+      position: 'bottom-center',
     });
   };
 

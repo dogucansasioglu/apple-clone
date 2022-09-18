@@ -1,15 +1,15 @@
-import Head from "next/head";
-import Header from "../components/Header";
-import { useSelector } from "react-redux";
-import { selectBasketItems, selectBasketTotal } from "../store/basketSlice";
-import Button from "../components/Button";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
-import CheckoutProduct from "../components/CheckoutProduct";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import Stripe from "stripe";
-import { fetchPostJSON } from "../utils/apiHelpers";
-import getStripe from "../utils/getStripe";
+import Head from 'next/head';
+import Header from '../components/Header';
+import { useSelector } from 'react-redux';
+import { selectBasketItems, selectBasketTotal } from '../store/basketSlice';
+import Button from '../components/Button';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import CheckoutProduct from '../components/CheckoutProduct';
+import { ChevronDownIcon } from '@heroicons/react/24/outline';
+import Stripe from 'stripe';
+import { fetchPostJSON } from '../utils/apiHelpers';
+import getStripe from '../utils/getStripe';
 
 interface GroupedItems {
   [key: string]: Product[];
@@ -43,7 +43,7 @@ const Checkout = () => {
     setLoading(true);
 
     const checkoutSession: Stripe.Checkout.Session = await fetchPostJSON(
-      "/api/checkout-session",
+      '/api/checkout-session',
       {
         items,
       }
@@ -78,14 +78,14 @@ const Checkout = () => {
       <main className="mx-auto max-w-5xl pb-24">
         <div className="px-5">
           <h1 className="my-4 text-3xl font-semibold lg:text-4xl">
-            {items.length > 0 ? "Your Bag" : "Your bag is empty"}
+            {items.length > 0 ? 'Your Bag' : 'Your bag is empty'}
           </h1>
           <p className="my-4">Free delivery and free returns.</p>
 
           {items.length === 0 && (
             <Button
               title="Continue Shopping"
-              onClick={() => router.push("/")}
+              onClick={() => router.push('/')}
             />
           )}
         </div>
@@ -133,7 +133,7 @@ const Checkout = () => {
                       <span>Pay Monthly</span>
                       <span>with Apple Card</span>
                       <span>
-                        $283.16/mo. for 24 months at 0% APR with $0 down{" "}
+                        $283.16/mo. for 24 months at 0% APR with $0 down{' '}
                         <sup className="-top-1">◊</sup>
                       </span>
                     </h4>

@@ -1,22 +1,22 @@
-import { BiCategory } from "react-icons/bi";
+import { BiCategory } from 'react-icons/bi';
 
 export default {
-  name: "category",
-  title: "Category",
-  type: "document",
+  name: 'category',
+  title: 'Category',
+  type: 'document',
   icon: BiCategory,
   fields: [
     {
-      name: "title",
-      title: "Title",
-      type: "string",
+      name: 'title',
+      title: 'Title',
+      type: 'string',
     },
     {
-      name: "slug",
-      title: "Slug",
-      type: "slug",
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
       options: {
-        source: "title",
+        source: 'title',
         maxLength: 96,
       },
     },
