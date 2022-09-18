@@ -1,13 +1,16 @@
-export interface IPromoCard {
-  sampleTextProp: string;
+import Header from '../../Header';
+
+export interface IPrimaryLayout {
+  children: React.ReactNode;
 }
 
-const PromoCard = ({ sampleTextProp }: IPromoCard) => {
+const PrimaryLayout = ({ children }: IPrimaryLayout) => {
   return (
-    <div>
-      <h1>{sampleTextProp}</h1>
-    </div>
+    <>
+      <Header />
+      {children}
+    </>
   );
 };
 
-export default PromoCard;
+export default PrimaryLayout;

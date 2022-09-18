@@ -1,9 +1,9 @@
-import { IPromoCard } from './PrimaryLayout';
+import { IPrimaryLayout } from './PrimaryLayout';
 
-const base: IPromoCard = {
-  sampleTextProp: 'Hello world!',
+const base: IPrimaryLayout = {
+  children: '<p>Hello world!</p>',
 };
 
-export const mockPromoCardProps = {
+export const mockPrimaryLayoutProps = {
   base,
 };

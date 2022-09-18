@@ -6,9 +6,9 @@ import {
   ShoppingBagIcon,
   UserIcon,
 } from '@heroicons/react/24/outline';
-import { selectBasketItems } from '../store/basketSlice';
-import { useSelector } from 'react-redux';
 import { signIn, signOut, useSession } from 'next-auth/react';
+import { useSelector } from 'react-redux';
+import { selectBasketItems } from '../store/basketSlice';
 
 const Header = () => {
   const { data: session } = useSession();

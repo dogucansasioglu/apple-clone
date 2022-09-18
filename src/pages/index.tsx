@@ -3,7 +3,6 @@ import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import Basket from '../components/Basket';
 import PromoCard from '../components/cards/promo/Promo';
-import Header from '../components/Header';
 import Landing from '../components/Landing';
 import { fetchCategories } from '../utils/fetchCategories';
 import { fetchProducts } from '../utils/fetchProducts';
@@ -30,8 +29,6 @@ const Home = ({ categories, products }: Props) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Header />
 
       <Basket />
 
@@ -78,6 +75,7 @@ const Home = ({ categories, products }: Props) => {
 
 export default Home;
 
+// backend
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const categories = await fetchCategories();
   const products = await fetchProducts();
