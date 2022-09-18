@@ -1,12 +1,12 @@
+import { Tab } from '@headlessui/react';
 import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
+import Basket from '../components/Basket';
+import PromoCard from '../components/cards/promo/Promo';
 import Header from '../components/Header';
 import Landing from '../components/Landing';
-import { Tab } from '@headlessui/react';
 import { fetchCategories } from '../utils/fetchCategories';
 import { fetchProducts } from '../utils/fetchProducts';
-import Product from '../components/Product';
-import Basket from '../components/Basket';
 
 interface Props {
   categories: Category[];
@@ -17,7 +17,7 @@ const Home = ({ categories, products }: Props) => {
   const showProducts = (category: number) => {
     return products
       .filter((product) => product.category._ref === categories[category]._id)
-      .map((product) => <Product product={product} key={product._id} />);
+      .map((product) => <PromoCard product={product} key={product._id} />);
   };
 
   return (

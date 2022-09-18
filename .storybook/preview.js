@@ -1,7 +1,9 @@
 // @ts-check
 import * as NextImage from 'next/image';
 import React from 'react';
-// import '../pages/globals.css';
+import { Provider } from 'react-redux';
+import { store } from '../src/store/store';
+import '../src/styles/globals.css';
 
 const BREAKPOINTS_INT = {
   xs: 375,
@@ -35,6 +37,14 @@ Object.defineProperty(NextImage, 'default', {
   value: (props) => <OriginalNextImage {...props} unoptimized />,
 });
 
+export const decorators = [
+  (Story) => (
+    <Provider store={store}>
+      <Story />
+    </Provider>
+  ),
+];
+
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
@@ -44,5 +54,8 @@ export const parameters = {
     },
   },
   viewport: { viewports: customViewports },
+  previewTabs: {
+    'storybook/docs/panel': { index: -1 },
+  },
   // layout: 'fullscreen',
 };

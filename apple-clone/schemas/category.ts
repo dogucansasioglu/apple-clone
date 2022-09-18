@@ -1,10 +1,10 @@
-import { BiCategory } from 'react-icons/bi';
+// import { BiCategory } from 'react-icons/bi';
 
 export default {
   name: 'category',
   title: 'Category',
   type: 'document',
-  icon: BiCategory,
+  // icon: BiCategory,
   fields: [
     {
       name: 'title',

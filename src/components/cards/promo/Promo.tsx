@@ -1,16 +1,15 @@
 import { ShoppingCartIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
-import { FC } from 'react';
-import { urlFor } from '../lib/sanity.server';
+import toast from 'react-hot-toast'; // TODO: import on click event
 import { useDispatch } from 'react-redux';
-import { addToBasket } from '../store/basketSlice';
-import toast from 'react-hot-toast';
+import { urlFor } from '../../../lib/sanity.server';
+import { addToBasket } from '../../../store/basketSlice';
 
-interface Props {
+export interface IPromoCard {
   product: Product;
 }
 
-const Product: FC<Props> = ({ product }: Props) => {
+const PromoCard = ({ product }: IPromoCard) => {
   const dispatch = useDispatch();
 
   const addItemToBasket = () => {
@@ -27,8 +26,7 @@ const Product: FC<Props> = ({ product }: Props) => {
           src={urlFor(product.image[0].asset._ref).url()}
           layout="fill"
           objectFit="contain"
-          // placeholder="blur"
-          alt=""
+          alt={`image of ${product.title}`}
         />
       </div>
 
@@ -49,4 +47,4 @@ const Product: FC<Props> = ({ product }: Props) => {
   );
 };
 
-export default Product;
+export default PromoCard;
