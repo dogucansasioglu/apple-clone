@@ -1,7 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { SessionProvider } from 'next-auth/react';
 import Header from './Header';
-import { mockHeaderProps } from './Header.mocks';
 
 const session = {
   expires: '2023-10-01T12:00:00.000Z',
@@ -30,7 +29,3 @@ const Template: ComponentStory<typeof Header> = () => (
 
 export const Base = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-
-Base.args = {
-  ...mockHeaderProps.base,
-};
