@@ -20,7 +20,7 @@ const PromoCard = ({ product }: IPromoCard) => {
   };
 
   return (
-    <div className="flex h-fit w-[320px] select-none flex-col space-y-3 rounded-xl bg-[#35383c] p-8 md:h-[500px] md:w-[400px] md:p-10">
+    <div className="flex h-fit w-[320px] select-none flex-col space-y-3 rounded-xl bg-promo p-8 md:h-[500px] md:w-[400px] md:p-10">
       <div className="relative h-64 w-full md:h-72">
         <Image
           src={urlFor(product.image[0].asset._ref).url()}
@@ -37,7 +37,7 @@ const PromoCard = ({ product }: IPromoCard) => {
         </div>
 
         <div
-          className="bg-gpv5 flex h-16 w-16 flex-shrink-0 cursor-pointer items-center justify-center rounded-full md:h-[70px] md:w-[70px]"
+          className="bg-gpv5 transition-300 flex h-16 w-16 flex-shrink-0 cursor-pointer items-center justify-center rounded-full hover:opacity-90 md:h-[70px] md:w-[70px]"
           onClick={addItemToBasket}
         >
           <ShoppingCartIcon className="h-8 cursor-pointer text-white" />

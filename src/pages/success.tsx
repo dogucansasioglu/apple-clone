@@ -97,11 +97,11 @@ const Success = ({ products }: Props) => {
           <div className="mx-4 flex flex-col items-center justify-between text-sm lg:ml-14 lg:flex-row">
             <p className="hidden lg:inline">Need help? Contact us!</p>
             <Button
-              title="Continue Shopping"
               onClick={() => router.push('/')}
-              width=" "
-              padding="py-4 w-full lg:w-auto"
-            />
+              classes="py-4 w-full lg:w-auto"
+            >
+              <span>Continue Shopping</span>
+            </Button>
           </div>
         </section>
 
