@@ -80,10 +80,9 @@ const Checkout = () => {
           <p className="my-4">Free delivery and free returns.</p>
 
           {items.length === 0 && (
-            <Button
-              title="Continue Shopping"
-              onClick={() => router.push('/')}
-            />
+            <Button onClick={() => router.push('/')}>
+              <span>Continue Shopping</span>
+            </Button>
           )}
         </div>
 
@@ -134,7 +133,11 @@ const Checkout = () => {
                         <sup className="-top-1">◊</sup>
                       </span>
                     </h4>
-                    <Button title="Check Out with Apple Card Monthly Installments" />
+                    <Button>
+                      <span>
+                        Check Out with Apple Card Monthly Installments
+                      </span>
+                    </Button>
                     <p className="mt-2 max-w-[240px] text-sm">
                       $0.00 due today, which includes applicable full-price
                       items, down payments, shipping, and taxes.
@@ -148,12 +151,12 @@ const Checkout = () => {
                     </h4>
 
                     <Button
-                      noIcon
-                      title="Check Out"
-                      width="w-full"
+                      classes="w-full"
                       onClick={createCheckoutSession}
                       loading={loading}
-                    />
+                    >
+                      <span>Check Out</span>
+                    </Button>
                   </div>
                 </div>
               </div>

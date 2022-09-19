@@ -1,9 +1,9 @@
 import { Tab } from '@headlessui/react';
 import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
-import Basket from '../components/Basket';
 import PromoCard from '../components/cards/promo/PromoCard';
 import HomeHero from '../components/heroes/home/HomeHero';
+import Basket from '../components/utility/basket/Basket';
 import { fetchCategories } from '../utils/fetchCategories';
 import { fetchProducts } from '../utils/fetchProducts';
 
