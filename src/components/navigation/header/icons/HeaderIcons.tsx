@@ -11,7 +11,6 @@ export interface IHeaderIcons {
 }
 
 const HeaderIcons = ({ items, session, signIn, signOut }: IHeaderIcons) => {
-  console.log(session);
   return (
     <div className="flex-center gap-x-5">
       <Link href="/checkout">

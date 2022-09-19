@@ -5,7 +5,6 @@ export interface ICategories {
 }
 
 const Categories = ({ categories }: ICategories) => {
-  console.log(categories);
   const cat = categories.map((category) => (
     <Tab
       key={category._id}
