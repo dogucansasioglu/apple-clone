@@ -17,9 +17,10 @@ export async function fetchPostJSON(
     });
     return await res.json();
   } catch (error) {
-    if (error instanceof Error) {
-      throw new Error(error.message);
-    }
-    throw error;
+    // if (error instanceof Error) {
+    //   throw new Error(error.message);
+    // }
+    // throw error;
+    console.log(error);
   }
 }

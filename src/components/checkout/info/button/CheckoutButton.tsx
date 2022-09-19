@@ -15,10 +15,26 @@ const CheckoutButton = () => {
   const createCheckoutSession = async () => {
     setLoading(true);
 
+    const itemsArray = items.map((item) => {
+      const {
+        category,
+        description,
+        slug,
+        _updatedAt,
+        _rev,
+        _createdAt,
+        _type,
+        _id,
+        ...newObj
+      } = item;
+
+      return newObj;
+    });
+
     const checkoutSession: Stripe.Checkout.Session = await fetchPostJSON(
       '/api/checkout-session',
       {
-        items,
+        items: itemsArray,
       }
     );
 

@@ -11,7 +11,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method === 'POST') {
-    const items: Product[] = req.body.items;
+    const items: StripeProductClient[] = req.body.items;
 
     // This is the shape in which stripe expects the data to be
     const transformedItems = items.map((item) => ({
@@ -49,6 +49,7 @@ export default async function handler(
 
       res.status(200).json(checkoutSession);
     } catch (err) {
+      console.log(err);
       const errorMessage =
         err instanceof Error ? err.message : 'Internal server error';
       res.status(500).json({ statusCode: 500, message: errorMessage });

@@ -31,6 +31,12 @@ interface Product {
   };
 }
 
+interface StripeProductClient {
+  title: string;
+  price: number;
+  image: Image[];
+}
+
 interface Image {
   _key: string;
   _type: 'image';
