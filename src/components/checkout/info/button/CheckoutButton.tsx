@@ -17,14 +17,14 @@ const CheckoutButton = () => {
 
     const itemsArray = items.map((item) => {
       const {
-        category,
-        description,
-        slug,
-        _updatedAt,
-        _rev,
-        _createdAt,
-        _type,
-        _id,
+        category: _,
+        description: __,
+        slug: ___,
+        _updatedAt: ____,
+        _rev: _____,
+        _createdAt: ______,
+        _type: _______,
+        _id: ________,
         ...newObj
       } = item;
 
