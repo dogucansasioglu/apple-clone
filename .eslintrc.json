@@ -13,7 +13,8 @@
     "React": "readonly"
   },
   "rules": {
-    "no-used-vars": "off"
+    "no-used-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["off"]
   },
   "overrides": [
     {
