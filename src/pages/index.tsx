@@ -1,5 +1,6 @@
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
+import Cta from '../components/cta/Cta';
 import HomeHero from '../components/heroes/home/HomeHero';
 import Promo from '../components/Promo/Promo';
 import Basket from '../components/utility/basket/Basket';
@@ -24,10 +25,10 @@ const Home = ({ categories, products }: IHomePage) => {
       </Head>
 
       <Basket />
-
       <HomeHero />
-
       <Promo categories={categories} products={products} />
+      <Cta />
+      <div className="p-24"></div>
     </div>
   );
 };

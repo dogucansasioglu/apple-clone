@@ -32,6 +32,9 @@
   .successButton {
     @apply transition-300 bg-gpv5 rounded-lg px-6 py-3 text-sm font-semibold text-white hover:opacity-90;
   }
+  .ctaButton {
+    @apply transition-300 bg-gpv5 rounded-lg px-5 py-2.5 text-base font-semibold text-white hover:opacity-90 sm:px-6 sm:py-3 sm:text-lg md:px-10 md:py-4 xl:text-xl;
+  }
   .borderGradient {
     @apply bg-gpv5 bg-[length:100%_2px] bg-left-bottom bg-no-repeat pb-[5px] text-center;
   }
