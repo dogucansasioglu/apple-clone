@@ -16,7 +16,7 @@ const CheckoutTitle = ({ length }: ICheckoutTitle) => {
       <p className="my-4">Free delivery and free returns.</p>
       {length === 0 && (
         <Button
-          classes="mx-auto primaryButton"
+          className="primaryButton mx-auto"
           onClick={() => router.push('/')}
         >
           <span>Continue Shopping</span>

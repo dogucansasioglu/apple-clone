@@ -26,7 +26,7 @@ const CheckoutButton = () => {
         _type: _______,
         _id: ________,
         ...newObj
-      } = item;
+      } = item.product;
 
       return newObj;
     });
@@ -57,7 +57,7 @@ const CheckoutButton = () => {
   return (
     <div className="flex-center my-14">
       <Button
-        classes="transition-300 bg-gpv5 rounded-lg px-8 py-4 text-white font-semibold text-xl"
+        className="transition-300 bg-gpv5 rounded-lg px-8 py-4 text-xl font-semibold text-white"
         onClick={createCheckoutSession}
         loading={loading}
       >

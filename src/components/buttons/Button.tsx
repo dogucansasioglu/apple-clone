@@ -1,16 +1,24 @@
 export interface IButton {
   loading?: boolean;
   children?: React.ReactNode;
-  classes?: string;
+  className?: string;
   onClick?: () => void;
+  disabled?: boolean;
 }
 
-const Button = ({ loading, classes, children, onClick }: IButton) => {
+const Button = ({
+  loading,
+  className,
+  children,
+  onClick,
+  disabled,
+}: IButton) => {
   return (
     <button
-      className={`${classes}
+      className={`${className}
          transition-300 cursor-pointer`}
       onClick={onClick}
+      disabled={disabled}
     >
       {loading ? 'Loading...' : children}
     </button>

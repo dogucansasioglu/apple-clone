@@ -1,8 +1,8 @@
 import { ICheckoutProduct } from './CheckoutProduct';
 
 const base: ICheckoutProduct = {
-  items: [
-    {
+  item: {
+    product: {
       _createdAt: '2022-09-15T15:50:20Z',
       _id: 'c829d634-30db-4168-8fa1-0822f8035807',
       _rev: 'lC9kKFrqWLq43LJkclwP6k',
@@ -31,8 +31,8 @@ const base: ICheckoutProduct = {
       description:
         'The new iPad Pro is a powerful device with a large screen and a fast processor. It is a great device for watching movies, playing games, and doing work.',
     },
-  ],
-  id: 'c829d634-30db-4168-8fa1-0822f8035807',
+    quantity: 1,
+  },
 };
 
 export const mockCheckoutProductProps = {

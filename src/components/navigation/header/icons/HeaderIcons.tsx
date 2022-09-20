@@ -4,21 +4,21 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export interface IHeaderIcons {
-  items: Product[];
+  length: number;
   session: Session | null;
   signIn: () => void;
   signOut: () => void;
 }
 
-const HeaderIcons = ({ items, session, signIn, signOut }: IHeaderIcons) => {
+const HeaderIcons = ({ length, session, signIn, signOut }: IHeaderIcons) => {
   return (
     <div className="flex-center gap-x-5">
       <Link href="/checkout">
         {/* TODO: fix animation  */}
         <div className="relative cursor-pointer">
-          {items.length > 0 && (
+          {length > 0 && (
             <span className="bg-gpv5 font-white absolute -right-1 -top-1 z-50 flex h-5 w-5 items-center justify-center rounded-full text-xs text-white">
-              {items.length}
+              {length}
             </span>
           )}
           <ShoppingBagIcon className="headerIcon" />

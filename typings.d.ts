@@ -31,6 +31,18 @@ interface Product {
   };
 }
 
+interface ProductObj {
+  product: Product;
+  quantity: number;
+}
+
+interface ReduxStoreState {
+  _id: {
+    product: Product;
+    quantity: number;
+  };
+}
+
 interface StripeProductClient {
   title: string;
   price: number;

@@ -45,4 +45,7 @@
   .bg-promo {
     @apply bg-[#37383D];
   }
+  .pmButton {
+    @apply cursor-pointer text-blue-500 hover:text-blue-700 disabled:cursor-not-allowed disabled:text-blue-200;
+  }
 }

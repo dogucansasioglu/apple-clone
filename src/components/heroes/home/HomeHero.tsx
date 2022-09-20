@@ -19,10 +19,10 @@ const HomeHero = () => {
             </h1>
 
             <div className="space-x-8">
-              <Button classes="primaryButton">
+              <Button className="primaryButton">
                 <span className="">Buy Now</span>
               </Button>
-              <Button classes="link">
+              <Button className="link">
                 <span>Learn More</span>
               </Button>
             </div>

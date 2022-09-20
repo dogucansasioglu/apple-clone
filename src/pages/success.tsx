@@ -2,7 +2,7 @@ import {
   CheckIcon,
   ChevronDownIcon,
   ChevronUpIcon,
-  ShoppingCartIcon,
+  ShoppingCartIcon
 } from '@heroicons/react/24/outline';
 import { GetServerSideProps } from 'next';
 import { useSession } from 'next-auth/react';
@@ -98,7 +98,7 @@ const Success = ({ products }: Props) => {
             <p className="hidden lg:inline">Need help? Contact us!</p>
             <Button
               onClick={() => router.push('/')}
-              classes="py-4 w-full lg:w-auto"
+              className="py-4 w-full lg:w-auto"
             >
               <span>Continue Shopping</span>
             </Button>

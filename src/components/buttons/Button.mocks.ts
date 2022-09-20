@@ -1,7 +1,7 @@
 import { IButton } from './Button';
 
 const base: IButton = {
-  classes: 'primaryButton',
+  className: 'primaryButton',
   children: 'Button',
   onClick: () => {
     console.log('Button clicked');
