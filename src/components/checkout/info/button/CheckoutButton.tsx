@@ -4,7 +4,7 @@ import Stripe from 'stripe';
 import { selectBasketItems } from '../../../../store/basketSlice';
 import { fetchPostJSON } from '../../../../utils/apiHelpers';
 import getStripe from '../../../../utils/getStripe';
-import Button from '../../../Button';
+import Button from '../../../buttons/Button';
 
 // TODO: dynamic import stripe
 

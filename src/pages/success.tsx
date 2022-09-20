@@ -11,7 +11,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import Button from '../components/Button';
+import Button from '../components/buttons/Button';
 import { fetchLineItems } from '../utils/fetchLineItems';
 
 interface Props {
