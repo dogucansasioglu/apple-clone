@@ -1,3 +1,4 @@
+import { useAutoAnimate } from '@formkit/auto-animate/react';
 import { Tab } from '@headlessui/react';
 import Categories from './categories/Categories';
 import Products from './products/Products';
@@ -8,6 +9,8 @@ export interface IPromo {
 }
 
 const Promo = ({ products, categories }: IPromo) => {
+  const [parent] = useAutoAnimate<HTMLDivElement>();
+
   return (
     <section className="relative z-40 -mt-[100vh] min-h-screen bg-[#1A1A1B]">
       <div className="space-y-10 py-16">
@@ -19,7 +22,10 @@ const Promo = ({ products, categories }: IPromo) => {
           <Tab.List className="flex justify-center">
             <Categories categories={categories} />
           </Tab.List>
-          <Tab.Panels className="mx-auto max-w-fit pt-10 pb-24 sm:px-4">
+          <Tab.Panels
+            className="mx-auto max-w-fit pt-10 pb-24 sm:px-4"
+            ref={parent}
+          >
             <Products categories={categories} products={products} />
           </Tab.Panels>
         </Tab.Group>

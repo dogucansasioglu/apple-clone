@@ -18,6 +18,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@formkit/auto-animate": "^1.0.0-beta.3",
     "@headlessui/react": "^1.7.1",
     "@heroicons/react": "^2.0.11",
     "@portabletext/react": "^1.0.6",
@@ -27,6 +28,7 @@
     "next": "12.3.0",
     "next-auth": "^4.10.3",
     "next-auth-sanity": "^1.4.4",
+    "next-redux-wrapper": "^8.0.0",
     "next-sanity": "^0.8.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
