@@ -6,8 +6,7 @@
 
 @layer base {
   html {
-    /* @apply font-body text-[#232428]; */
-    @apply font-body text-gray-800;
+    @apply font-sans text-gray-800;
   }
 }
 
@@ -29,6 +28,9 @@
   }
   .primaryButton {
     @apply transition-300 bg-gpv5 rounded-lg px-6 py-3 text-lg font-semibold text-white hover:opacity-90 md:px-8 md:py-4 xl:text-xl;
+  }
+  .successButton {
+    @apply transition-300 bg-gpv5 rounded-lg px-6 py-3 text-sm font-semibold text-white hover:opacity-90;
   }
   .borderGradient {
     @apply bg-gpv5 bg-[length:100%_2px] bg-left-bottom bg-no-repeat pb-[5px] text-center;
