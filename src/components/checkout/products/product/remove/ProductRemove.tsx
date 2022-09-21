@@ -15,7 +15,7 @@ const ProductRemove = ({ id, title, price }: IProductRemove) => {
   const removeItemFromBasket = () => {
     dispatch(removeFromBasket(id));
 
-    toast.error(`${title} removed from basket`, {
+    toast.success(`${title} removed from basket`, {
       position: 'bottom-center',
     });
   };

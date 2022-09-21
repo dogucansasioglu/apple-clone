@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,14 +12,14 @@
   .transition-300 {
     @apply transition-all duration-300 ease-in-out;
   }
-  .headerIcon {
-    @apply transition-300 h-8 w-8 cursor-pointer text-gray-800 hover:text-violet-500;
-  }
   .bg-gpv5 {
     @apply bg-gradient-to-r from-pink-500 to-violet-500;
   }
   .bg-gpv6 {
     @apply bg-gradient-to-r from-pink-600 to-violet-600;
+  }
+  .headerIcon {
+    @apply transition-300 h-8 w-8 cursor-pointer text-gray-800 hover:text-violet-500;
   }
   .link {
     @apply relative cursor-pointer text-lg font-medium before:absolute before:inset-x-0 before:-bottom-1.5 before:h-0.5 before:origin-left before:scale-x-0 before:transform before:rounded-bl before:bg-black before:transition-all before:duration-200 before:ease-in-out hover:before:scale-x-100 xl:text-xl;
@@ -52,5 +50,29 @@
   }
   .pmButton {
     @apply cursor-pointer text-blue-500 hover:text-blue-700 disabled:cursor-not-allowed disabled:text-blue-200;
+  }
+  .footer-socials {
+    @apply flex gap-2;
+  }
+  .footer-socials {
+    @apply flex gap-2;
+  }
+  .footer-social-container {
+    @apply transition-300 flex h-10 w-10 items-center justify-center rounded-full bg-gray-700 p-3 hover:bg-gray-500 lg:h-12 lg:w-12 lg:p-3.5;
+  }
+  .footer-social {
+    @apply transition-300 relative h-5 w-5;
+  }
+  .footer-link {
+    @apply transition-300 cursor-pointer hover:text-gray-500;
+  }
+  .footer-text {
+    @apply text-lg md:text-base lg:text-lg xl:text-xl;
+  }
+  .footer-title {
+    @apply pb-4 text-2xl font-semibold text-gray-100 md:text-xl lg:text-2xl xl:text-3xl;
+  }
+  .footer-logo {
+    @apply relative h-12 w-12 xl:h-16 xl:w-16;
   }
 }

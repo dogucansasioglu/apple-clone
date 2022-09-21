@@ -2,7 +2,7 @@ import Button from '../buttons/Button';
 
 const Cta = () => {
   return (
-    <div className="mt-48 px-5">
+    <div className="mt-32 px-5">
       <div className="flex-center mx-auto mt-10 h-full max-w-full flex-col gap-10 rounded-2xl bg-cta bg-cover bg-[center] bg-no-repeat py-12 px-6 text-white sm:gap-16 md:max-w-3xl md:p-16 lg:max-w-5xl  xl:max-w-7xl">
         <h1 className="text-xl font-semibold sm:text-2xl md:text-3xl lg:text-4xl">
           Subscribe to our newsletter

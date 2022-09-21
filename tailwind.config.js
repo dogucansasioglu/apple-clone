@@ -12,9 +12,10 @@ module.exports = {
       },
       colors: {
         promo: '#35383c',
+        'promo-dark': '#1A1A1B',
       },
       backgroundImage: {
-        cta: "linear-gradient(rgba(17, 24, 39, 0.5), rgba(17, 24, 39,0.5)), url('/cta.jpg') ",
+        cta: "linear-gradient(rgba(26,26,27, 0.5), rgba(26,26,27,0.5)), url('/cta.jpg') ",
       },
     },
   },
