@@ -1,6 +1,5 @@
 import { ShoppingCartIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
-import toast from 'react-hot-toast'; // TODO: import on click event
 import { useDispatch } from 'react-redux';
 import { urlFor } from '../../../lib/sanity.server';
 import { addToBasket } from '../../../store/basketSlice';
@@ -12,9 +11,10 @@ export interface IPromoCard {
 const PromoCard = ({ product }: IPromoCard) => {
   const dispatch = useDispatch();
 
-  const addItemToBasket = () => {
+  const addItemToBasket = async () => {
     dispatch(addToBasket(product));
-    toast.success(`${product.title} added to basket!`, {
+    const toast = (await import('react-hot-toast')).default;
+    toast.success(`${product.title} added to bag!`, {
       position: 'bottom-center',
     });
   };

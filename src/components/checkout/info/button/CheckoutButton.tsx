@@ -1,12 +1,9 @@
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
-import Stripe from 'stripe';
 import { selectBasketItems } from '../../../../store/basketSlice';
 import { fetchPostJSON } from '../../../../utils/apiHelpers';
 import getStripe from '../../../../utils/getStripe';
 import Button from '../../../buttons/Button';
-
-// TODO: dynamic import stripe
 
 const CheckoutButton = () => {
   const items = useSelector(selectBasketItems);
@@ -31,7 +28,7 @@ const CheckoutButton = () => {
       return newObj;
     });
 
-    const checkoutSession: Stripe.Checkout.Session = await fetchPostJSON(
+    const checkoutSession: StripeSession = await fetchPostJSON(
       '/api/checkout-session',
       {
         items: itemsArray,

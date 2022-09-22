@@ -72,3 +72,8 @@ interface StripeProduct {
     unit_amount: number;
   };
 }
+
+interface StripeSession {
+  id: string;
+  mode: 'payment' | 'setup' | 'subscription';
+}

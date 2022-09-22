@@ -1,5 +1,11 @@
-import Footer from '../../footer/Footer';
+import dynamic from 'next/dynamic';
 import Header from '../../navigation/header/Header';
+import LazyLoad from '../../utility/lazyLoad/LazyLoad';
+
+const DynamicFooter = dynamic(() => import('../../footer/Footer'), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
 
 export interface IPrimaryLayout {
   children: React.ReactNode;
@@ -10,7 +16,9 @@ const PrimaryLayout = ({ children }: IPrimaryLayout) => {
     <div className="bg-color min-h-screen">
       <Header />
       {children}
-      <Footer />
+      <LazyLoad rootMargin="300px">
+        <DynamicFooter />
+      </LazyLoad>
     </div>
   );
 };

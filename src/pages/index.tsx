@@ -1,11 +1,17 @@
 import { GetServerSideProps } from 'next';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import Cta from '../components/cta/Cta';
 import HomeHero from '../components/heroes/home/HomeHero';
 import Promo from '../components/Promo/Promo';
 import Basket from '../components/utility/basket/Basket';
+import LazyLoad from '../components/utility/lazyLoad/LazyLoad';
 import { fetchCategories } from '../utils/fetchCategories';
 import { fetchProducts } from '../utils/fetchProducts';
+
+const DynamicCta = dynamic(() => import('../components/cta/Cta'), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
 
 interface IHomePage {
   categories: Category[];
@@ -27,8 +33,9 @@ const Home = ({ categories, products }: IHomePage) => {
       <Basket />
       <HomeHero />
       <Promo categories={categories} products={products} />
-      <Cta />
-      <div className="p-24"></div>
+      <LazyLoad rootMargin="300px">
+        <DynamicCta />
+      </LazyLoad>
     </div>
   );
 };

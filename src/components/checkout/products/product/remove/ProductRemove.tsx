@@ -1,4 +1,3 @@
-import toast from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
 import { removeFromBasket } from '../../../../../store/basketSlice';
 import Button from '../../../../buttons/Button';
@@ -12,10 +11,11 @@ export interface IProductRemove {
 const ProductRemove = ({ id, title, price }: IProductRemove) => {
   const dispatch = useDispatch();
 
-  const removeItemFromBasket = () => {
+  const removeItemFromBasket = async () => {
     dispatch(removeFromBasket(id));
+    const toast = (await import('react-hot-toast')).default;
 
-    toast.success(`${title} removed from basket`, {
+    toast.success(`${title} removed from bag`, {
       position: 'bottom-center',
     });
   };

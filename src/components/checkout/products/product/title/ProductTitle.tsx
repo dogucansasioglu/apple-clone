@@ -3,7 +3,6 @@ import {
   MinusCircleIcon,
   PlusCircleIcon,
 } from '@heroicons/react/24/outline';
-import toast from 'react-hot-toast';
 import { useDispatch } from 'react-redux';
 import { minusBasket, plusBasket } from '../../../../../store/basketSlice';
 import Button from '../../../../buttons/Button';
@@ -17,16 +16,17 @@ export interface IProductTitle {
 const ProductTitle = ({ title, length, id }: IProductTitle) => {
   const dispatch = useDispatch();
 
-  const handleMinus = (id: string) => {
-    dispatch(minusBasket(id));
-    toast.success(`${title} removed from basket!`, {
-      position: 'bottom-center',
-    });
-  };
-
-  const handlePlus = (id: string) => {
-    dispatch(plusBasket(id));
-    toast.success(`${title} added to basket!`, {
+  const handleMinusPlus = async (id: string, type: 'plus' | 'minus') => {
+    let toastMsg: string;
+    const toast = (await import('react-hot-toast')).default;
+    if (type === 'plus') {
+      dispatch(plusBasket(id));
+      toastMsg = `${title} added to bag!`;
+    } else {
+      dispatch(minusBasket(id));
+      toastMsg = `${title} removed from bag!`;
+    }
+    toast.success(toastMsg, {
       position: 'bottom-center',
     });
   };
@@ -41,7 +41,7 @@ const ProductTitle = ({ title, length, id }: IProductTitle) => {
           <Button
             className="pmButton"
             disabled={length === 0 ? true : false}
-            onClick={() => handlePlus(id)}
+            onClick={() => handleMinusPlus(id, 'plus')}
           >
             <PlusCircleIcon className="transition-300 h-6 w-6" />
           </Button>
@@ -49,7 +49,7 @@ const ProductTitle = ({ title, length, id }: IProductTitle) => {
           <Button
             className="pmButton"
             disabled={length <= 1 ? true : false}
-            onClick={() => handleMinus(id)}
+            onClick={() => handleMinusPlus(id, 'minus')}
           >
             <MinusCircleIcon className="transition-300 h-6 w-6" />
           </Button>
