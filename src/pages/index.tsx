@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next';
+import { GetStaticProps } from 'next';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import HomeHero from '../components/heroes/home/HomeHero';
@@ -42,15 +42,10 @@ const Home = ({ categories, products }: IHomePage) => {
 
 export default Home;
 
-export const getServerSideProps: GetServerSideProps<IHomePage> = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const categories = await fetchCategories();
   const products = await fetchProducts();
-
-  if (!categories || !products) {
-    return {
-      notFound: true,
-    };
-  }
+  console.log('getStaticProps', products[0]);
 
   return {
     props: {

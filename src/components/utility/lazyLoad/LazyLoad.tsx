@@ -1,5 +1,5 @@
-import { ComponentType, CSSProperties, ReactNode, useRef } from 'react';
-import { useIntersectionObserver } from '../../../utils/useIntersectionObserver';
+import { ComponentType, CSSProperties, ReactNode } from 'react';
+import useIntersection from '../../../utils/useIntersection';
 
 interface LazyLoadProps {
   tag?: ComponentType | keyof JSX.IntrinsicElements;
@@ -12,26 +12,9 @@ interface LazyLoadProps {
   forward?: boolean;
 }
 
-function LazyLoad(props: LazyLoadProps) {
-  const { tag = 'div', children, style, className } = props;
-  // @ts-ignore
-  const Tag: any = tag;
-  const ref = useRef<Element>(null);
-  const isIntersecting = useIntersectionObserver(
-    ref,
-    {
-      root: props.root ?? null,
-      threshold: props.threshold ?? 0,
-      rootMargin: props.rootMargin,
-    },
-    props.forward
-  );
-
-  return (
-    <Tag ref={ref} style={style} className={className}>
-      {isIntersecting ? null : children}
-    </Tag>
-  );
+export function LazyLoad(props: LazyLoadProps) {
+  const [isIntersecting, ref] = useIntersection();
+  return <div ref={ref}>{isIntersecting ? props.children : null}</div>;
 }
 
 export default LazyLoad;
