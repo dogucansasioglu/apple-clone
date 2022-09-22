@@ -23,7 +23,9 @@ const PromoCard = ({ product }: IPromoCard) => {
     <div className="flex h-fit w-[320px] select-none flex-col space-y-3 rounded-xl bg-promo p-8 md:h-[500px] md:w-[400px] md:p-10">
       <div className="relative h-64 w-full md:h-72">
         <Image
-          src={urlFor(product.image[0].asset._ref).url()}
+          src={urlFor(product.image._ref).url()}
+          blurDataURL={product.image.lqip}
+          placeholder="blur"
           layout="fill"
           objectFit="contain"
           alt={`image of ${product.title}`}

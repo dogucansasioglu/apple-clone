@@ -6,9 +6,12 @@ type Data = {
   products: Product[];
 };
 
-const query = groq`*[_type == "product"]{
-  _id,
-  ...
+const query = groq`*[_type == "product"] {
+  ...,
+  "image": {
+    "_ref": image.asset._ref,
+    "lqip": image.asset->metadata.lqip
+  } 
 } | order(_createdAt asc)`;
 
 export default async function handler(

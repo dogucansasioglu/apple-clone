@@ -12,7 +12,7 @@ const Promo = ({ products, categories }: IPromo) => {
   const [parent] = useAutoAnimate<HTMLDivElement>();
 
   return (
-    <section className="relative z-40 -mt-[100vh] min-h-screen bg-promo-dark">
+    <section className="relative z-30 -mt-[100vh] min-h-screen bg-promo-dark">
       <div className="space-y-10 py-16">
         <h1 className="text-center text-4xl font-medium tracking-wide text-white">
           New Promos

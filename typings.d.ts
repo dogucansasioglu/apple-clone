@@ -24,7 +24,7 @@ interface Product {
   title: string;
   description: string;
   price: number;
-  image: Image[];
+  image: Image;
   category: {
     _ref: string;
     _type: 'reference';
@@ -46,16 +46,12 @@ interface ReduxStoreState {
 interface StripeProductClient {
   title: string;
   price: number;
-  image: Image[];
+  image: Image;
 }
 
 interface Image {
-  _key: string;
-  _type: 'image';
-  asset: {
-    _ref: string;
-    _type: 'reference';
-  };
+  _ref: string;
+  lqip: string;
 }
 
 interface StripeProduct {

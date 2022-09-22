@@ -9,7 +9,7 @@ export interface ICheckoutProduct {
 const CheckoutProduct = ({ item }: ICheckoutProduct) => {
   return (
     <div className="flex flex-col gap-x-4 border-b border-gray-300 pb-5 pt-2 sm:flex-row sm:items-center">
-      <ProductImage image={item.product.image[0]} title={item.product.title} />
+      <ProductImage image={item.product.image} title={item.product.title} />
 
       <div className="flex flex-1 items-end lg:items-center">
         <ProductTitle
