@@ -4,7 +4,6 @@ import Head from 'next/head';
 import HomeHero from '../components/heroes/home/HomeHero';
 import Promo from '../components/Promo/Promo';
 import Basket from '../components/utility/basket/Basket';
-import LazyLoad from '../components/utility/lazyLoad/LazyLoad';
 import { fetchCategories } from '../utils/fetchCategories';
 import { fetchProducts } from '../utils/fetchProducts';
 
@@ -33,9 +32,7 @@ const Home = ({ categories, products }: IHomePage) => {
       <Basket />
       <HomeHero />
       <Promo categories={categories} products={products} />
-      <LazyLoad rootMargin="300px">
-        <DynamicCta />
-      </LazyLoad>
+      <DynamicCta />
     </div>
   );
 };
@@ -45,7 +42,6 @@ export default Home;
 export const getStaticProps: GetStaticProps = async () => {
   const categories = await fetchCategories();
   const products = await fetchProducts();
-  console.log('getStaticProps', products[0]);
 
   return {
     props: {

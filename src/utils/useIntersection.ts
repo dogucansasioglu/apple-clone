@@ -48,7 +48,7 @@ export default function useIntersection(
       ob.disconnect();
       isUnmounted = true;
     };
-  }, [elemRef.current, options, onIntersection]);
+  }, [options, onIntersection]);
 
   return [isIntersecting, setElem] as const;
 }

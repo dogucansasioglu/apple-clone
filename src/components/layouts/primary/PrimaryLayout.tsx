@@ -1,6 +1,5 @@
 import dynamic from 'next/dynamic';
 import Header from '../../navigation/header/Header';
-import LazyLoad from '../../utility/lazyLoad/LazyLoad';
 
 const DynamicFooter = dynamic(() => import('../../footer/Footer'), {
   ssr: false,
@@ -16,9 +15,7 @@ const PrimaryLayout = ({ children }: IPrimaryLayout) => {
     <div className="bg-color min-h-screen">
       <Header />
       {children}
-      <LazyLoad rootMargin="300px">
-        <DynamicFooter />
-      </LazyLoad>
+      <DynamicFooter />
     </div>
   );
 };
