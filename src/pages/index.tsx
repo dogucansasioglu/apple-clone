@@ -4,8 +4,8 @@ import Head from 'next/head';
 import HomeHero from '../components/heroes/home/HomeHero';
 import Promo from '../components/Promo/Promo';
 import Basket from '../components/utility/basket/Basket';
-import { fetchCategories } from '../utils/fetchCategories';
-import { fetchProducts } from '../utils/fetchProducts';
+import { loadCategories } from '../lib/load-categories';
+import { loadProducts } from '../lib/load-products';
 
 const DynamicCta = dynamic(() => import('../components/cta/Cta'), {
   ssr: false,
@@ -40,8 +40,8 @@ const Home = ({ categories, products }: IHomePage) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const categories = await fetchCategories();
-  const products = await fetchProducts();
+  const { categories } = await loadCategories();
+  const { products } = await loadProducts();
 
   return {
     props: {
