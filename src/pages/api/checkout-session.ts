@@ -19,7 +19,7 @@ export default async function handler(
         currency: 'usd',
         product_data: {
           name: item.title,
-          images: [urlFor(item.image[0]).url()],
+          images: [urlFor(item.image._ref).url()],
         },
         unit_amount: item.price * 100,
       },
@@ -40,7 +40,7 @@ export default async function handler(
         cancel_url: `${req.headers.origin}/checkout`,
         metadata: {
           images: JSON.stringify(
-            items.map((item) => urlFor(item.image[0]).url())
+            items.map((item) => urlFor(item.image._ref).url())
           ),
         },
       };
