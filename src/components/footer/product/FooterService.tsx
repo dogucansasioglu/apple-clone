@@ -2,12 +2,22 @@ const FooterProduct = () => {
   return (
     <div className="flex flex-col text-center sm:text-left md:pl-5">
       <div>
-        <h1 className="footer-title">Product & Service</h1>
+        <h1 className="pb-4 text-2xl font-semibold text-gray-100 md:text-xl lg:text-2xl xl:text-3xl">
+          Product & Service
+        </h1>
         <ul className="space-y-4">
-          <li className="footer-link">Smartphones</li>
-          <li className="footer-link">Tablets</li>
-          <li className="footer-link">Audio Sound</li>
-          <li className="footer-link">Smart Switch</li>
+          <li className="transition-all duration-300 ease-in-out cursor-pointer hover:text-gray-500">
+            Smartphones
+          </li>
+          <li className="transition-all duration-300 ease-in-out cursor-pointer hover:text-gray-500">
+            Tablets
+          </li>
+          <li className="transition-all duration-300 ease-in-out cursor-pointer hover:text-gray-500">
+            Audio Sound
+          </li>
+          <li className="transition-all duration-300 ease-in-out cursor-pointer hover:text-gray-500">
+            Smart Switch
+          </li>
         </ul>
       </div>
     </div>

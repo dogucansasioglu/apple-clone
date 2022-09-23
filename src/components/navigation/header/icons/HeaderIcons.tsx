@@ -12,15 +12,15 @@ const HeaderIcons = () => {
   const [parent] = useAutoAnimate<HTMLDivElement>();
 
   return (
-    <div className="flex-center gap-x-5">
+    <div className="flex items-center justify-center gap-x-5">
       <Link href="/checkout">
         <div className="relative cursor-pointer" ref={parent}>
           {length > 0 && (
-            <span className="bg-gpv5 absolute -right-1 -top-1 z-50 flex h-5 w-5 items-center justify-center rounded-full text-xs text-white">
+            <span className="bg-gradient-to-r from-pink-500 to-violet-500 absolute -right-1 -top-1 z-50 flex h-5 w-5 items-center justify-center rounded-full text-xs text-white">
               {length}
             </span>
           )}
-          <ShoppingBagIcon className="headerIcon" />
+          <ShoppingBagIcon className="transition-all duration-300 ease-in-out h-8 w-8 cursor-pointer text-gray-800 hover:text-violet-500" />
         </div>
       </Link>
 
@@ -34,7 +34,10 @@ const HeaderIcons = () => {
           onClick={() => signOut()}
         />
       ) : (
-        <UserIcon className="headerIcon" onClick={() => signIn()} />
+        <UserIcon
+          className="transition-all duration-300 ease-in-out h-8 w-8 cursor-pointer text-gray-800 hover:text-violet-500"
+          onClick={() => signIn()}
+        />
       )}
     </div>
   );

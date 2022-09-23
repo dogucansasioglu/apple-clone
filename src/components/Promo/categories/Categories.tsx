@@ -12,8 +12,8 @@ const Categories = ({ categories }: ICategories) => {
       className={({ selected }) =>
         `whitespace-nowrap rounded-t-lg py-2 px-4 text-base outline-none sm:py-3 sm:px-5 md:py-4 md:px-8 md:text-lg ${
           selected
-            ? 'borderGradient transition-300 bg-promo text-gray-50'
-            : 'transition-300 border-b-2 border-promo text-gray-500'
+            ? 'bg-gradient-to-r from-pink-500 to-violet-500 bg-[length:100%_2px] bg-left-bottom bg-no-repeat pb-[5px] text-center transition-all duration-300 ease-in-out bg-promo text-gray-50'
+            : 'transition-all duration-300 ease-in-out border-b-2 border-promo text-gray-500'
         }`
       }
     >

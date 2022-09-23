@@ -24,7 +24,7 @@ const Loader = () => {
   return (
     <div ref={parent}>
       {loading && (
-        <div className="bg-color fixed top-0 left-0 z-50 flex h-full w-full items-center justify-center">
+        <div className="bg-ws fixed top-0 left-0 z-50 flex h-full w-full items-center justify-center">
           <div className="h-32 w-32 animate-spin rounded-full border-t-2 border-b-2 border-gray-900"></div>
         </div>
       )}

@@ -9,7 +9,7 @@ const HomeHero = () => {
           <div className="space-y-10">
             <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">
               <span className="font-medium leading-[1.1] tracking-[-0.5px]">
-                <span className="bg-gpv5 block bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-pink-500 to-violet-500 block bg-clip-text text-transparent">
                   Powered
                 </span>
                 By Intellect
@@ -19,10 +19,10 @@ const HomeHero = () => {
             </h1>
 
             <div className="space-x-8">
-              <Button className="primaryButton">
+              <Button className="transition-all duration-300 ease-in-out bg-gradient-to-r from-pink-500 to-violet-500 rounded-lg px-6 py-3 text-lg font-semibold text-white hover:opacity-90 md:px-8 md:py-4 xl:text-xl">
                 <span className="">Buy Now</span>
               </Button>
-              <Button className="link">
+              <Button className="relative cursor-pointer text-lg font-medium before:absolute before:inset-x-0 before:-bottom-1.5 before:h-0.5 before:origin-left before:scale-x-0 before:transform before:rounded-bl before:bg-black before:transition-all before:duration-200 before:ease-in-out hover:before:scale-x-100 xl:text-xl">
                 <span>Learn More</span>
               </Button>
             </div>

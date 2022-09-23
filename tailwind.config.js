@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         promo: '#35383c',
         'promo-dark': '#1A1A1B',
+        ws: '#e7ecee',
       },
       backgroundImage: {
         cta: "linear-gradient(rgba(26,26,27, 0.5), rgba(26,26,27,0.5)), url('/cta.jpg') ",

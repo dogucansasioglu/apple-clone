@@ -22,7 +22,7 @@ const Checkout = () => {
   const items = useSelector(selectBasketItems);
 
   return (
-    <div className="bg-color min-h-[35vh]">
+    <div className="bg-ws min-h-[35vh]">
       <Head>
         <title>Bag - Apple</title>
         <link rel="icon" href="/favicon.ico" />

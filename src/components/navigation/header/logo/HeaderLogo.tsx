@@ -3,9 +3,9 @@ import Link from 'next/link';
 
 const HeaderLogo = () => {
   return (
-    <div className="flex-center">
+    <div className="flex items-center justify-center">
       <Link href="/">
-        <div className="transition-300 relative h-12 w-7 cursor-pointer opacity-80 hover:opacity-100">
+        <div className="transition-all duration-300 ease-in-out relative h-12 w-7 cursor-pointer opacity-80 hover:opacity-100">
           <Image
             src="/logo.png"
             fill

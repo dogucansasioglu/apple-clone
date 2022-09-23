@@ -8,7 +8,7 @@ const Footer = () => {
     <>
       <div className="p-24"></div>
       <div className="bg-promo-dark px-3 py-20 sm:py-40">
-        <div className="footer-text mx-auto grid max-w-xl grid-cols-1 grid-rows-1 gap-y-12 px-4 text-gray-400 sm:grid-cols-2 sm:grid-rows-2 md:max-w-7xl md:grid-cols-4 md:grid-rows-1">
+        <div className="text-lg md:text-base lg:text-lg xl:text-xl mx-auto grid max-w-xl grid-cols-1 grid-rows-1 gap-y-12 px-4 text-gray-400 sm:grid-cols-2 sm:grid-rows-2 md:max-w-7xl md:grid-cols-4 md:grid-rows-1">
           <FooterLogonSocials />
 
           {/* Product and Service */}

@@ -9,7 +9,7 @@ const SuccessThank = () => {
 
   return (
     <div className="flex items-center gap-4 pb-3">
-      <div className="flex-center h-11 w-11 rounded-full border-2 border-gray-800">
+      <div className="flex items-center justify-center h-11 w-11 rounded-full border-2 border-gray-800">
         <CheckIcon className="h-8 w-8" />
       </div>
       <div>

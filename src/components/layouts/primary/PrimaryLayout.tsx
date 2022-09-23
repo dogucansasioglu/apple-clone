@@ -12,7 +12,7 @@ export interface IPrimaryLayout {
 
 const PrimaryLayout = ({ children }: IPrimaryLayout) => {
   return (
-    <div className="bg-color min-h-screen">
+    <div className="bg-ws min-h-screen">
       <Header />
       {children}
       <DynamicFooter />

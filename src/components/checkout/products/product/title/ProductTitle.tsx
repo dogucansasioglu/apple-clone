@@ -37,26 +37,26 @@ const ProductTitle = ({ title, length, id }: IProductTitle) => {
         <h4 className="w-28 select-none font-medium md:w-60 lg:w-96">
           {title}
         </h4>
-        <p className="flex-center gap-x-1 font-medium">
+        <p className="flex items-center justify-center gap-x-1 font-medium">
           <Button
-            className="pmButton"
+            className="cursor-pointer text-blue-500 hover:text-blue-700 disabled:cursor-not-allowed disabled:text-blue-200"
             disabled={length === 0 ? true : false}
             onClick={() => handleMinusPlus(id, 'plus')}
           >
-            <PlusCircleIcon className="transition-300 h-6 w-6" />
+            <PlusCircleIcon className="transition-all duration-300 ease-in-out h-6 w-6" />
           </Button>
           <span>{length}</span>
           <Button
-            className="pmButton"
+            className="cursor-pointer text-blue-500 hover:text-blue-700 disabled:cursor-not-allowed disabled:text-blue-200"
             disabled={length <= 1 ? true : false}
             onClick={() => handleMinusPlus(id, 'minus')}
           >
-            <MinusCircleIcon className="transition-300 h-6 w-6" />
+            <MinusCircleIcon className="transition-all duration-300 ease-in-out h-6 w-6" />
           </Button>
         </p>
       </div>
 
-      <p className="transition-300 flex cursor-pointer select-none items-end text-blue-500 hover:text-blue-700">
+      <p className="transition-all duration-300 ease-in-out flex cursor-pointer select-none items-end text-blue-500 hover:text-blue-700">
         Show product details
         <ChevronDownIcon className="h-6 w-6" />
       </p>

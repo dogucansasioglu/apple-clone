@@ -21,7 +21,10 @@ const Products = ({ categories, products }: IProducts) => {
   return (
     <>
       {categories.map((category, index) => (
-        <Tab.Panel key={category._id} className="tabPanel">
+        <Tab.Panel
+          key={category._id}
+          className="grid grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3"
+        >
           {showProducts(index)}
         </Tab.Panel>
       ))}
