@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/future/image';
 import Button from '../../buttons/Button';
 
 const HomeHero = () => {
@@ -27,13 +27,13 @@ const HomeHero = () => {
               </Button>
             </div>
           </div>
-          <div className="relative hidden h-full w-2/4 transition-all duration-500 md:inline">
+          <div className="relative hidden h-full w-2/4 md:inline">
             <Image
               src="/iphone.png"
-              layout="fill"
-              objectFit="contain"
               priority
               alt="image of iPhone"
+              fill
+              className="object-contain"
             />
           </div>
         </div>

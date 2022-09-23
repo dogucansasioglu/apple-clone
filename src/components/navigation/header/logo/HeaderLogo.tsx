@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/future/image';
 import Link from 'next/link';
 
 const HeaderLogo = () => {
@@ -8,8 +8,8 @@ const HeaderLogo = () => {
         <div className="transition-300 relative h-12 w-7 cursor-pointer opacity-80 hover:opacity-100">
           <Image
             src="/logo.png"
-            layout="fill"
-            objectFit="contain"
+            fill
+            className="object-contain"
             alt="apple clone logo"
           />
         </div>

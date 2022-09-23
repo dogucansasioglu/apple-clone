@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/future/image';
 
 const FooterLogonSocials = () => {
   return (
@@ -8,8 +8,8 @@ const FooterLogonSocials = () => {
           <Image
             src="/logo-white.png"
             alt="logo"
-            layout="fill"
-            objectFit="contain"
+            fill
+            className="object-contain"
           />
         </div>
         <div>
@@ -23,8 +23,8 @@ const FooterLogonSocials = () => {
             <Image
               src="/facebook.png"
               alt="facebook"
-              layout="fill"
-              objectFit="contain"
+              fill
+              className="object-contain"
             />
           </div>
         </div>
@@ -33,8 +33,8 @@ const FooterLogonSocials = () => {
             <Image
               src="/linkedin.png"
               alt="linkedin"
-              layout="fill"
-              objectFit="contain"
+              fill
+              className="object-contain"
             />
           </div>
         </div>
@@ -43,8 +43,8 @@ const FooterLogonSocials = () => {
             <Image
               src="/twitter.png"
               alt="twitter"
-              layout="fill"
-              objectFit="contain"
+              fill
+              className="object-contain"
             />
           </div>
         </div>
@@ -53,8 +53,8 @@ const FooterLogonSocials = () => {
             <Image
               src="/instagram.png"
               alt="instagram"
-              layout="fill"
-              objectFit="contain"
+              fill
+              className="object-contain"
             />
           </div>
         </div>

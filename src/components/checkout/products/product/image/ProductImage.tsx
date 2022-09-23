@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/future/image';
 import { urlFor } from '../../../../../lib/sanity.server';
 
 export interface IProductImage {
@@ -13,8 +13,8 @@ const ProductImage = ({ image, title }: IProductImage) => {
         src={urlFor(image._ref).url()}
         blurDataURL={image.lqip}
         placeholder="blur"
-        layout="fill"
-        objectFit="contain"
+        fill
+        className="object-contain"
         alt={`image of ${title}`}
       />
     </div>

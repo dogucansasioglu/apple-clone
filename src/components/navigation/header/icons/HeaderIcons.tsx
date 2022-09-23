@@ -1,7 +1,7 @@
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 import { ShoppingBagIcon, UserIcon } from '@heroicons/react/24/outline';
 import { signIn, signOut, useSession } from 'next-auth/react';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import { basketLength } from '../../../../store/basketSlice';

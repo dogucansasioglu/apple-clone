@@ -1,5 +1,5 @@
 import { ShoppingCartIcon } from '@heroicons/react/24/outline';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import { useDispatch } from 'react-redux';
 import { urlFor } from '../../../lib/sanity.server';
 import { addToBasket } from '../../../store/basketSlice';
@@ -26,8 +26,8 @@ const PromoCard = ({ product }: IPromoCard) => {
           src={urlFor(product.image._ref).url()}
           blurDataURL={product.image.lqip}
           placeholder="blur"
-          layout="fill"
-          objectFit="contain"
+          fill
+          className="object-contain"
           alt={`image of ${product.title}`}
         />
       </div>
