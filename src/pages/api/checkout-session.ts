@@ -11,37 +11,37 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (req.method === 'POST') {
-    const items: StripeProductClient[] = req.body.items;
+    const items: ProductObj[] = req.body.items;
 
-    // This is the shape in which stripe expects the data to be
-    const transformedItems = items.map((item) => ({
-      price_data: {
-        currency: 'usd',
-        product_data: {
-          name: item.title,
-          images: [urlFor(item.image._ref).url()],
+    const line_items = items.map((item) => {
+      return {
+        price_data: {
+          currency: 'usd',
+          product_data: {
+            name: item.product.title,
+            images: [urlFor(item.product.image).url() as string],
+          },
+          unit_amount: item.product.price * 100,
         },
-        unit_amount: item.price * 100,
-      },
-      quantity: 1,
-    }));
+        quantity: item.quantity,
+      };
+    });
+
+    const images = items.map((item) => {
+      return urlFor(item.product.image).url();
+    });
 
     try {
       // Create Checkout Sessions from body params
       const params: Stripe.Checkout.SessionCreateParams = {
         payment_method_types: ['card'],
-        // shipping_address_collection: {
-        //   allowed_countries: ["US", "CA", "GB"],
-        // },
-        line_items: transformedItems,
+        line_items,
         payment_intent_data: {},
         mode: 'payment',
         success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${req.headers.origin}/checkout`,
         metadata: {
-          images: JSON.stringify(
-            items.map((item) => urlFor(item.image._ref).url())
-          ),
+          images: JSON.stringify(images),
         },
       };
       const checkoutSession: Stripe.Checkout.Session =

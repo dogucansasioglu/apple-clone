@@ -12,26 +12,27 @@ const CheckoutButton = () => {
   const createCheckoutSession = async () => {
     setLoading(true);
 
-    const itemsArray = items.map((item) => {
-      const {
-        category: _,
-        description: __,
-        slug: ___,
-        _updatedAt: ____,
-        _rev: _____,
-        _createdAt: ______,
-        _type: _______,
-        _id: ________,
-        ...newObj
-      } = item.product;
-
-      return newObj;
-    });
+    // const itemsArray = items.map((item) => {
+    //   const {
+    //     category: _,
+    //     description: __,
+    //     slug: ___,
+    //     _updatedAt: ____,
+    //     _rev: _____,
+    //     _createdAt: ______,
+    //     _type: _______,
+    //     _id: ________,
+    //     ...newObj
+    //   } = item.product;
+    //   newObj.quantity = item.quantity;
+    //   return newObj;
+    // });
 
     const checkoutSession: StripeSession = await fetchPostJSON(
       '/api/checkout-session',
       {
-        items: itemsArray,
+        // items: itemsArray,
+        items,
       }
     );
 

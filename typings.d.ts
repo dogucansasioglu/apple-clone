@@ -43,12 +43,6 @@ interface ReduxStoreState {
   };
 }
 
-interface StripeProductClient {
-  title: string;
-  price: number;
-  image: Image;
-}
-
 interface Image {
   _ref: string;
   lqip: string;

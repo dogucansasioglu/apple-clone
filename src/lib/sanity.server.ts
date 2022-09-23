@@ -1,7 +1,6 @@
 import createClient from '@sanity/client';
 import imageUrlBuilder from '@sanity/image-url';
 import { SanityImageSource } from '@sanity/image-url/lib/types/types';
-
 interface SanityConfig {
   projectId: string;
   dataset: string;

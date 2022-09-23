@@ -2,11 +2,6 @@
   "name": "apple-clone",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": ">=16.0.0",
-    "yarn": "please use npm",
-    "npm": ">=7.0.0"
-  },
   "scripts": {
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
@@ -15,7 +10,8 @@
     "prettier": "prettier --write .",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
     "@formkit/auto-animate": "^1.0.0-beta.3",
@@ -24,8 +20,10 @@
     "@next/bundle-analyzer": "^12.3.1",
     "@portabletext/react": "^1.0.6",
     "@reduxjs/toolkit": "^1.8.5",
+    "@sanity/client": "^3.4.1",
     "@sanity/image-url": "^1.0.1",
     "@stripe/stripe-js": "^1.36.0",
+    "csstype": "^3.0.10",
     "next": "12.3.0",
     "next-auth": "^4.10.3",
     "next-auth-sanity": "^1.4.4",
@@ -35,9 +33,14 @@
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.0",
     "react-redux": "^8.0.2",
+    "redux": ">4.0.0 <5.0.0",
     "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.4.1",
+    "require-from-string": "^2.0.2",
+    "sanity": "^2.33.2",
     "sharp": "^0.31.0",
-    "stripe": "^10.10.0"
+    "stripe": "^10.10.0",
+    "webpack": "5"
   },
   "devDependencies": {
     "@babel/core": "^7.19.1",
@@ -65,6 +68,7 @@
     "eslint-plugin-storybook": "^0.6.4",
     "husky": "^8.0.1",
     "postcss": "^8.4.16",
+    "postcss-import": "^15.0.0",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
     "tailwindcss": "^3.1.8",
