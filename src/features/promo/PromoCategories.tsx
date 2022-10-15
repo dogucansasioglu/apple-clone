@@ -1,10 +1,10 @@
 import { Tab } from '@headlessui/react';
 
-export interface ICategories {
+export interface IPromoCategories {
   categories: Category[];
 }
 
-export default function Categories({ categories }: ICategories) {
+export default function PromoCategories({ categories }: IPromoCategories) {
   if (categories.length === 0)
     return (
       <div className="text-center text-2xl text-white">No categories found</div>

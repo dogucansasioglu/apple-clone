@@ -1,7 +1,7 @@
 import { urlFor } from '@/lib/sanity.server';
 import Image from 'next/future/image';
 
-interface IPromoImage {
+export interface IPromoImage {
   image: Image;
   title: string;
 }

@@ -6,13 +6,22 @@ import PromoProducts from './PromoProducts';
 export interface IPromo {
   products: Product[];
   categories: Category[];
+  isStorybook?: boolean;
 }
 
-export default function Promo({ products, categories }: IPromo) {
+export default function Promo({
+  products,
+  categories,
+  isStorybook = false,
+}: IPromo) {
   const [parent] = useAutoAnimate<HTMLDivElement>();
 
   return (
-    <section className="relative z-30 -mt-[100vh] min-h-screen space-y-10 bg-promo-dark py-16">
+    <section
+      className={`relative z-30 ${
+        isStorybook ? '' : '-mt-[100vh]'
+      } min-h-screen space-y-10 bg-promo-dark py-16`}
+    >
       <h1 className="text-center text-4xl font-medium tracking-wide text-white">
         New Promos
       </h1>

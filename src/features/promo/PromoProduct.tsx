@@ -2,11 +2,11 @@ import PromoCheckoutButton from './PromoCheckoutButton';
 import PromoImage from './PromoImage';
 import PromoText from './PromoText';
 
-export interface IPromoCard {
+export interface IPromoProduct {
   product: Product;
 }
 
-const PromoCard = ({ product }: IPromoCard) => {
+export default function IPromoProduct({ product }: IPromoProduct) {
   return (
     <div className="flex h-full w-[320px] select-none flex-col space-y-3 rounded-xl bg-promo p-8 sm:w-[400px] sm:p-10">
       <PromoImage image={product.image} title={product.title} />
@@ -17,6 +17,4 @@ const PromoCard = ({ product }: IPromoCard) => {
       </div>
     </div>
   );
-};
-
-export default PromoCard;
+}
