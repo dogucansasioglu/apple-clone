@@ -27,12 +27,18 @@ module.exports = {
           'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #1f2937, #1f2937)',
         'secondary-hover':
           'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #1f2937 10%, #1f2937)',
+        'gradient-promo':
+          'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #35383c, #35383c)',
+        'gradient-promo-hover':
+          'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #35383c 10%, #35383c)',
       },
       backgroundSize: {
         'size-primary': '0 100%, 100% 100%',
         'size-primary-hover': '100% 100%, 100% 100%',
+        'size-promo': '0 2px, 100% 2px',
+        'size-promo-hover': '100% 2px, 100% 2px',
       },
     },
   },
-  plugins: [],
+  plugins: [require('@headlessui/tailwindcss')],
 };

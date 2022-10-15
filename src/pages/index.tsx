@@ -1,8 +1,8 @@
 import { Hero } from '@/features/hero';
+import { Promo } from '@/features/promo';
 import { GetStaticProps } from 'next';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import Promo from '../components/Promo/Promo';
 import Basket from '../components/utility/basket/Basket';
 import { loadCategories } from '../lib/load-categories';
 import { loadProducts } from '../lib/load-products';

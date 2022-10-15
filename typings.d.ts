@@ -34,6 +34,7 @@ interface Product {
 interface ProductObj {
   product: Product;
   quantity: number;
+  // total: number;
 }
 
 interface ReduxStoreState {
