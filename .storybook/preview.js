@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import { store } from '../src/store/store';
 import '../src/styles/globals.css';
 
-// Allow Storybook to handle Next's <Image> component
 const OriginalNextImage = NextImage.default;
 
 Object.defineProperty(NextImage, 'default', {
@@ -32,5 +31,4 @@ export const parameters = {
   previewTabs: {
     'storybook/docs/panel': { index: -1 },
   },
-  layout: 'fullscreen',
 };

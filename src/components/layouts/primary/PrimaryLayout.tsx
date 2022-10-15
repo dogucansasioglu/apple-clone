@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import Header from '../../navigation/header/Header';
+import { Header } from 'src/features/header';
 
 const DynamicFooter = dynamic(() => import('../../footer/Footer'), {
   ssr: false,
