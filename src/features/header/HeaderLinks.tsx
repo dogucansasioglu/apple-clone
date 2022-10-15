@@ -5,7 +5,6 @@ const HeaderIcons = () => {
   return (
     <div className="flex items-center justify-center gap-x-5">
       <HeaderCheckoutButton />
-
       <HeaderUserButton />
     </div>
   );
