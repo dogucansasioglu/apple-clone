@@ -17,6 +17,7 @@ module.exports = {
         ws: '#e7ecee',
       },
       backgroundImage: {
+        backdrop: 'linear-gradient(90deg, #E5EAEE, #ECEDEC)',
         cta: "linear-gradient(rgba(26,26,27, 0.4), rgba(26,26,27,0.4)), url('/cta.jpg') ",
         logo: 'linear-gradient(90deg, #3b82f6, #6366f1), linear-gradient(90deg, #60a5fa, #818cf8)',
         'logo-hover':

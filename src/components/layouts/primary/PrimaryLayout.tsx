@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import { Header } from 'src/features/header';
 
-const DynamicFooter = dynamic(() => import('../../footer/Footer'), {
+const DynamicFooter = dynamic(() => import('@/components/footer/Footer'), {
   ssr: false,
   loading: () => <p>Loading...</p>,
 });
@@ -12,7 +12,7 @@ export interface IPrimaryLayout {
 
 const PrimaryLayout = ({ children }: IPrimaryLayout) => {
   return (
-    <div className="bg-ws min-h-screen">
+    <div className="min-h-screen bg-backdrop">
       <Header />
       {children}
       <DynamicFooter />

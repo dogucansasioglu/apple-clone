@@ -12,11 +12,11 @@ export default function HeaderCheckoutButton() {
     <Link href="/checkout">
       <div className="relative cursor-pointer" ref={parent}>
         {length > 0 && (
-          <span className="absolute -right-1 -top-1 z-50 flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-violet-500 text-xs text-white">
+          <span className="absolute -right-1 -top-1 z-50 flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-r from-blue-400 to-indigo-400 text-xs text-white">
             {length}
           </span>
         )}
-        <ShoppingBagIcon className="h-8 w-8 cursor-pointer text-gray-800 transition-all duration-300 ease-in-out hover:text-violet-500" />
+        <ShoppingBagIcon className="h-8 w-8 cursor-pointer text-gray-800 transition-all duration-300 ease-in-out hover:text-indigo-400" />
       </div>
     </Link>
   );
