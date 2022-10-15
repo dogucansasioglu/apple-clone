@@ -19,13 +19,18 @@ module.exports = {
       backgroundImage: {
         backdrop: 'linear-gradient(90deg, #E5EAEE, #ECEDEC)',
         cta: "linear-gradient(rgba(26,26,27, 0.4), rgba(26,26,27,0.4)), url('/cta.jpg') ",
-        logo: 'linear-gradient(90deg, #3b82f6, #6366f1), linear-gradient(90deg, #60a5fa, #818cf8)',
-        'logo-hover':
-          'linear-gradient(90deg, #3b82f6, #6366f1), linear-gradient(90deg, #60a5fa 10%, #818cf8)',
+        primary:
+          'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #60a5fa, #a78bfa)',
+        'primary-hover':
+          'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #60a5fa 10%, #a78bfa)',
+        secondary:
+          'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #1f2937, #1f2937)',
+        'secondary-hover':
+          'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #1f2937 10%, #1f2937)',
       },
       backgroundSize: {
-        'size-logo': '0 100%, 100% 100%',
-        'size-logo-hover': '100% 100%, 100% 100%',
+        'size-primary': '0 100%, 100% 100%',
+        'size-primary-hover': '100% 100%, 100% 100%',
       },
     },
   },

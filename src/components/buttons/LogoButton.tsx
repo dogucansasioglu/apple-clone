@@ -5,12 +5,12 @@ export interface ILogoButton {
 }
 
 export default function LogoButton({ location }: ILogoButton) {
-  const classes = location === 'header' ? 'text-3xl' : 'text-6xl';
+  const textSize = location === 'header' ? 'text-3xl' : 'text-6xl';
 
   return (
     <Link href="/">
       <a
-        className={`${classes} bg-logo bg-size-logo bg-clip-text bg-no-repeat font-bold text-transparent transition-all duration-500 ease-in-out hover:bg-size-logo-hover`}
+        className={`${textSize} bg-primary bg-size-primary bg-clip-text bg-no-repeat font-bold text-transparent transition-all duration-300 ease-in hover:bg-primary-hover hover:bg-size-primary-hover`}
       >
         Equal
       </a>

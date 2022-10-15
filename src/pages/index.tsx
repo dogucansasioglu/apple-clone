@@ -1,7 +1,7 @@
+import { Hero } from '@/features/hero';
 import { GetStaticProps } from 'next';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import HomeHero from '../components/heroes/home/HomeHero';
 import Promo from '../components/Promo/Promo';
 import Basket from '../components/utility/basket/Basket';
 import { loadCategories } from '../lib/load-categories';
@@ -25,7 +25,7 @@ const Home = ({ categories, products }: IHomePage) => {
       </Head>
 
       <Basket />
-      <HomeHero />
+      <Hero />
       <Promo categories={categories} products={products} />
       <DynamicCta />
     </>

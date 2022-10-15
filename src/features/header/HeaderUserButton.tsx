@@ -18,7 +18,7 @@ export default function HeaderUserButton() {
         />
       ) : (
         <UserIcon
-          className="h-8 w-8 cursor-pointer text-gray-800 transition-all duration-300 ease-in-out hover:text-indigo-500"
+          className="h-8 w-8 cursor-pointer text-gray-800 transition-all duration-300 ease-in-out hover:text-violet-500"
           onClick={() => signIn()}
         />
       )}
