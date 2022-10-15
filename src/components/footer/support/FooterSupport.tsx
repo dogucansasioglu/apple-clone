@@ -6,16 +6,16 @@ const FooterSupport = () => {
           Support
         </h1>
         <ul className="space-y-4">
-          <li className="transition-all duration-300 ease-in-out cursor-pointer hover:text-gray-500">
+          <li className="cursor-pointer transition-all duration-300 ease-in hover:text-gray-500">
             Email Support
           </li>
-          <li className="transition-all duration-300 ease-in-out cursor-pointer hover:text-gray-500">
+          <li className="cursor-pointer transition-all duration-300 ease-in hover:text-gray-500">
             WhatsApp
           </li>
-          <li className="transition-all duration-300 ease-in-out cursor-pointer hover:text-gray-500">
+          <li className="cursor-pointer transition-all duration-300 ease-in hover:text-gray-500">
             Live Chat
           </li>
-          <li className="transition-all duration-300 ease-in-out cursor-pointer hover:text-gray-500">
+          <li className="cursor-pointer transition-all duration-300 ease-in hover:text-gray-500">
             Phone Support
           </li>
         </ul>

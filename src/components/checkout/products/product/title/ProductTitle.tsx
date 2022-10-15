@@ -43,7 +43,7 @@ const ProductTitle = ({ title, length, id }: IProductTitle) => {
             disabled={length === 0 ? true : false}
             onClick={() => handleMinusPlus(id, 'plus')}
           >
-            <PlusCircleIcon className="transition-all duration-300 ease-in-out h-6 w-6" />
+            <PlusCircleIcon className="h-6 w-6 transition-all duration-300 ease-in" />
           </Button>
           <span>{length}</span>
           <Button
@@ -51,12 +51,12 @@ const ProductTitle = ({ title, length, id }: IProductTitle) => {
             disabled={length <= 1 ? true : false}
             onClick={() => handleMinusPlus(id, 'minus')}
           >
-            <MinusCircleIcon className="transition-all duration-300 ease-in-out h-6 w-6" />
+            <MinusCircleIcon className="h-6 w-6 transition-all duration-300 ease-in" />
           </Button>
         </p>
       </div>
 
-      <p className="transition-all duration-300 ease-in-out flex cursor-pointer select-none items-end text-blue-500 hover:text-blue-700">
+      <p className="flex cursor-pointer select-none items-end text-blue-500 transition-all duration-300 ease-in hover:text-blue-700">
         Show product details
         <ChevronDownIcon className="h-6 w-6" />
       </p>

@@ -6,16 +6,16 @@ const FooterShop = () => {
           Shop
         </h1>
         <ul className="space-y-4">
-          <li className="transition-all duration-300 ease-in-out cursor-pointer hover:text-gray-500">
+          <li className="cursor-pointer transition-all duration-300 ease-in hover:text-gray-500">
             Offers
           </li>
-          <li className="transition-all duration-300 ease-in-out cursor-pointer hover:text-gray-500">
+          <li className="cursor-pointer transition-all duration-300 ease-in hover:text-gray-500">
             Equal Store
           </li>
-          <li className="transition-all duration-300 ease-in-out cursor-pointer hover:text-gray-500">
+          <li className="cursor-pointer transition-all duration-300 ease-in hover:text-gray-500">
             Where to Buy
           </li>
-          <li className="transition-all duration-300 ease-in-out cursor-pointer hover:text-gray-500">
+          <li className="cursor-pointer transition-all duration-300 ease-in hover:text-gray-500">
             Online Show
           </li>
         </ul>

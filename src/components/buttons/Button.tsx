@@ -16,7 +16,7 @@ const Button = ({
   return (
     <button
       className={`${className}
-         transition-all duration-300 ease-in-out cursor-pointer`}
+         cursor-pointer transition-all duration-300 ease-in`}
       onClick={onClick}
       disabled={disabled}
     >

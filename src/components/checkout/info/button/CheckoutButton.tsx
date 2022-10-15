@@ -36,9 +36,9 @@ const CheckoutButton = () => {
   };
 
   return (
-    <div className="flex items-center justify-center my-14">
+    <div className="my-14 flex items-center justify-center">
       <Button
-        className="transition-all duration-300 ease-in-out bg-gradient-to-r from-pink-500 to-violet-500 rounded-lg px-8 py-4 text-xl font-semibold text-white hover:opacity-90"
+        className="rounded-lg bg-gradient-to-r from-pink-500 to-violet-500 px-8 py-4 text-xl font-semibold text-white transition-all duration-300 ease-in hover:opacity-90"
         onClick={createCheckoutSession}
         loading={loading}
       >

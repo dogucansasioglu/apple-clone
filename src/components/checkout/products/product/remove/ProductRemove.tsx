@@ -25,7 +25,7 @@ const ProductRemove = ({ id, title, price }: IProductRemove) => {
       <h4 className="select-none text-xl font-medium md:text-2xl">${price}</h4>
       <Button
         onClick={removeItemFromBasket}
-        className="transition-all duration-300 ease-in-out select-none text-blue-500 hover:text-blue-700"
+        className="select-none text-blue-500 transition-all duration-300 ease-in hover:text-blue-700"
       >
         Remove
       </Button>

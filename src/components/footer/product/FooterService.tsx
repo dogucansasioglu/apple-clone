@@ -6,16 +6,16 @@ const FooterProduct = () => {
           Product & Service
         </h1>
         <ul className="space-y-4">
-          <li className="transition-all duration-300 ease-in-out cursor-pointer hover:text-gray-500">
+          <li className="cursor-pointer transition-all duration-300 ease-in hover:text-gray-500">
             Smartphones
           </li>
-          <li className="transition-all duration-300 ease-in-out cursor-pointer hover:text-gray-500">
+          <li className="cursor-pointer transition-all duration-300 ease-in hover:text-gray-500">
             Tablets
           </li>
-          <li className="transition-all duration-300 ease-in-out cursor-pointer hover:text-gray-500">
+          <li className="cursor-pointer transition-all duration-300 ease-in hover:text-gray-500">
             Audio Sound
           </li>
-          <li className="transition-all duration-300 ease-in-out cursor-pointer hover:text-gray-500">
+          <li className="cursor-pointer transition-all duration-300 ease-in hover:text-gray-500">
             Smart Switch
           </li>
         </ul>

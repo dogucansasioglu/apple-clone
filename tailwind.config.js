@@ -30,13 +30,17 @@ module.exports = {
         'gradient-promo':
           'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #35383c, #35383c)',
         'gradient-promo-hover':
-          'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #35383c 10%, #35383c)',
+          'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #35383c 10%, #1f2937)',
+        'learn-more':
+          'linear-gradient(90deg, #3b82f6 10%, #8b5cf6 50%), linear-gradient(90deg, #1f2937 10%, #1f2937 50%)',
       },
       backgroundSize: {
         'size-primary': '0 100%, 100% 100%',
         'size-primary-hover': '100% 100%, 100% 100%',
         'size-promo': '0 2px, 100% 2px',
         'size-promo-hover': '100% 2px, 100% 2px',
+        'size-learn-more': '0 2px, 100% 2px',
+        'size-learn-more-hover': '100% 2px, 100% 2px',
       },
     },
   },

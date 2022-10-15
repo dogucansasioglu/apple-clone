@@ -16,7 +16,7 @@ export default function HeaderCheckoutButton() {
             {length}
           </span>
         )}
-        <ShoppingBagIcon className="h-8 w-8 cursor-pointer text-gray-800 transition-all duration-300 ease-in-out group-hover:text-violet-500" />
+        <ShoppingBagIcon className="h-8 w-8 cursor-pointer text-gray-800 transition-all duration-300 ease-in group-hover:text-violet-500" />
       </div>
     </Link>
   );

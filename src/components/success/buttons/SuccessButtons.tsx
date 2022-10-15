@@ -14,7 +14,7 @@ const SuccessButtons = () => {
       </p>
       <Button
         onClick={() => router.push('/')}
-        className="transition-all duration-300 ease-in-out bg-gradient-to-r from-pink-500 to-violet-500 rounded-lg px-6 py-3 text-sm font-semibold text-white hover:opacity-90"
+        className="rounded-lg bg-gradient-to-r from-pink-500 to-violet-500 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 ease-in hover:opacity-90"
       >
         <span>Continue Shopping</span>
       </Button>
