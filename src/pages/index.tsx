@@ -19,21 +19,16 @@ interface IHomePage {
 
 const Home = ({ categories, products }: IHomePage) => {
   return (
-    <div>
+    <>
       <Head>
         <title>Apple Clone</title>
-        <meta
-          name="description"
-          content="Discover the innovative world of Apple and shop everything iPhone, iPad, Apple Watch, Mac, and Apple TV, plus explore accessories, entertainment, and expert device support."
-        />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Basket />
       <HomeHero />
       <Promo categories={categories} products={products} />
       <DynamicCta />
-    </div>
+    </>
   );
 };
 

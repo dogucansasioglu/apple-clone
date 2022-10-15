@@ -25,7 +25,6 @@ const Checkout = () => {
     <div className="bg-ws min-h-[35vh]">
       <Head>
         <title>Bag - Apple</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="mx-auto max-w-5xl">

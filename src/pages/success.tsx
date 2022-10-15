@@ -8,7 +8,6 @@ const Success = () => {
     <div className="flex w-full items-start justify-center">
       <Head>
         <title>Thank you! - Apple</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className="max-w-xl space-y-3 p-7">
