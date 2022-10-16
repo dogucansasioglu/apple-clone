@@ -7,6 +7,7 @@ export interface ICheckoutProduct {
 }
 
 export default function CheckoutProduct({ item }: ICheckoutProduct) {
+  console.log(item);
   return (
     <div className="flex flex-col gap-x-4 border-b border-gray-300 py-5 sm:flex-row sm:items-center">
       <ProductImage image={item.product.image} title={item.product.title} />
