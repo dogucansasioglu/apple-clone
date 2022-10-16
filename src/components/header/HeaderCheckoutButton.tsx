@@ -15,7 +15,6 @@ export default function HeaderCheckoutButton() {
         {length > 0 && (
           <PrimaryButton
             rounded="rounded-full"
-            group="group-"
             className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center text-xs"
           >
             {length}

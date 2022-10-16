@@ -1,5 +1,5 @@
 import PrimaryLayout from '@/components/layout';
-import Loader from '@/components/utility/Loader';
+import Loader from '@/components/utility/loader';
 import '@/styles/globals.css';
 import { SessionProvider } from 'next-auth/react';
 import type { AppProps } from 'next/app';
