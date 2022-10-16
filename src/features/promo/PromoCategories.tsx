@@ -18,8 +18,8 @@ export default function PromoCategories({ categories }: IPromoCategories) {
           className={({ selected }) =>
             `rounded-t-lg bg-left-bottom bg-no-repeat py-3.5 px-5 outline-none transition-all duration-300 ease-in sm:py-4 sm:px-8 sm:text-lg ${
               selected
-                ? 'bg-promo bg-gradient-promo-hover bg-size-promo-hover text-gray-50'
-                : 'bg-gradient-promo bg-size-promo text-gray-500'
+                ? 'bg-promo bg-gradient-promo-hover bg-size-border-hover text-gray-50'
+                : 'bg-gradient-promo bg-size-border text-gray-500'
             }`
           }
         >

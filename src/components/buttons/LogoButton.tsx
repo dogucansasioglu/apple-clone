@@ -10,7 +10,7 @@ export default function LogoButton({ location }: ILogoButton) {
   return (
     <Link href="/">
       <a
-        className={`${textSize} bg-primary bg-size-primary bg-clip-text bg-no-repeat font-bold text-transparent transition-all duration-300 ease-in hover:bg-primary-hover hover:bg-size-primary-hover`}
+        className={`${textSize} bg-primary bg-size-gradient-bg bg-clip-text bg-no-repeat font-bold text-transparent transition-all duration-300 ease-in hover:bg-primary-hover hover:bg-size-gradient-bg-hover`}
       >
         Equal
       </a>

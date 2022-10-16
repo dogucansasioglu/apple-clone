@@ -12,7 +12,7 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof PromoProduct> = (args) => (
   <Tab.Group>
-    <Tab.List className="flex justify-center">
+    <Tab.List className="flex justify-center bg-promo-dark p-5">
       <PromoProduct {...args} />
     </Tab.List>
   </Tab.Group>

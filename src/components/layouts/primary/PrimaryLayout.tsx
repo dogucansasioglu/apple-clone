@@ -1,7 +1,7 @@
 import Header from '@/features/header';
 import dynamic from 'next/dynamic';
 
-const DynamicFooter = dynamic(() => import('@/components/footer/Footer'), {
+const DynamicFooter = dynamic(() => import('@/features/footer'), {
   ssr: false,
   loading: () => <p>Loading...</p>,
 });

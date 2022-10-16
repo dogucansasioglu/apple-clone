@@ -32,14 +32,20 @@ module.exports = {
           'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #35383c 10%, #1f2937)',
         'learn-more':
           'linear-gradient(90deg, #3b82f6 10%, #8b5cf6 50%), linear-gradient(90deg, #1f2937 10%, #1f2937 50%)',
+        'footer-link':
+          'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, rgba(156, 163, 175, 1), rgba(156, 163, 175, 1))',
+        'footer-link-hover':
+          'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, rgba(156, 163, 175, 1) 10%, rgba(156, 163, 175, 1))',
+        'footer-social':
+          'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, rgba(156, 163, 175, 0.3), rgba(156, 163, 175, 0.3))',
+        'footer-social-hover':
+          'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, rgba(156, 163, 175, 0.3) 10%, rgba(156, 163, 175, 0.3))',
       },
       backgroundSize: {
-        'size-primary': '0 100%, 100% 100%',
-        'size-primary-hover': '100% 100%, 100% 100%',
-        'size-promo': '0 2px, 100% 2px',
-        'size-promo-hover': '100% 2px, 100% 2px',
-        'size-learn-more': '0 2px, 100% 2px',
-        'size-learn-more-hover': '100% 2px, 100% 2px',
+        'size-gradient-bg': '0 100%, 100% 100%',
+        'size-gradient-bg-hover': '100% 100%, 100% 100%',
+        'size-border': '0 2px, 100% 2px',
+        'size-border-hover': '100% 2px, 100% 2px',
       },
     },
   },

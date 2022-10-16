@@ -4,6 +4,8 @@ export interface IPrimaryButton {
   className?: string;
   onClick?: () => void;
   disabled?: boolean;
+  rounded?: string;
+  group?: string;
 }
 
 export default function PrimaryButton({
@@ -12,11 +14,13 @@ export default function PrimaryButton({
   children,
   onClick,
   disabled,
+  rounded = 'rounded-lg',
+  group = '',
 }: IPrimaryButton) {
   return (
     <button
-      className={`${className}
-       cursor-pointer rounded-lg bg-primary bg-size-primary bg-no-repeat text-white transition-all duration-300 ease-in hover:bg-primary-hover hover:bg-size-primary-hover`}
+      className={`${className} ${rounded}
+       cursor-pointer bg-primary bg-size-gradient-bg bg-no-repeat text-white transition-all duration-300 ease-in ${group}hover:bg-primary-hover ${group}hover:bg-size-gradient-bg-hover`}
       onClick={onClick}
       disabled={disabled}
     >

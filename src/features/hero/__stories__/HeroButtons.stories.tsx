@@ -9,7 +9,11 @@ export default {
 } as ComponentMeta<typeof HeroButtons>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof HeroButtons> = (args) => <HeroButtons />;
+const Template: ComponentStory<typeof HeroButtons> = (args) => (
+  <div className="bg-backdrop p-5">
+    <HeroButtons />
+  </div>
+);
 
 export const Base = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args

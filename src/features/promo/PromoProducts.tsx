@@ -10,7 +10,6 @@ export default function PromoProducts({
   categories,
   products,
 }: IPromoProducts) {
-  console.log(products);
   if (categories.length === 0 || products.length === 0)
     return (
       <div className="text-center text-2xl text-white">No categories found</div>

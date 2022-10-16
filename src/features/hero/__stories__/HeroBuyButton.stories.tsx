@@ -10,7 +10,9 @@ export default {
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof HeroBuyButton> = (args) => (
-  <HeroBuyButton />
+  <div className="bg-backdrop p-5">
+    <HeroBuyButton />
+  </div>
 );
 
 export const Base = Template.bind({});

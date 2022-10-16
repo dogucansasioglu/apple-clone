@@ -23,4 +23,6 @@ Header.args = {
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   onClick: () => {},
   disabled: false,
+  rounded: 'rounded-lg',
+  group: '',
 } as IPrimaryButton;
