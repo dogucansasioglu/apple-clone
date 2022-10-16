@@ -18,6 +18,7 @@ export default function SecondaryButton({
   withBorder = true,
 }: ISecondaryButton) {
   return (
+    // if withBorder is true, add border to button
     <button
       className={`${
         withBorder &&

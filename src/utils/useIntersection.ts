@@ -1,3 +1,5 @@
+// this file is a modified version of Intersection API
+// i dont use it in this project but i will use it in the future
 import { useEffect, useRef, useState } from 'react';
 
 // interface IntersectionHookInit extends IntersectionObserverInit {

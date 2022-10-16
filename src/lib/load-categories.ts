@@ -1,6 +1,7 @@
 import { groq } from 'next-sanity';
 import { sanityClient } from './sanity.server';
 
+// select all categories
 const query = groq`*[_type == "category"]{
   _id,
   ...

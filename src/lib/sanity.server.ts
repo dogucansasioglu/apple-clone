@@ -18,5 +18,7 @@ export const config: SanityConfig = {
 };
 
 export const sanityClient = createClient(config);
+
+// urlFor is a helper function to generate a url for an image
 export const urlFor = (source: SanityImageSource) =>
   imageUrlBuilder(config).image(source);

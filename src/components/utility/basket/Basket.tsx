@@ -12,6 +12,7 @@ export default function Basket({ isStorybook }: IBasket) {
   let basketLength = useSelector(selectBasketLength);
   const [parent] = useAutoAnimate<HTMLDivElement>();
   if (isStorybook) {
+    // to test the basket component in storybook
     basketLength = 1;
   }
 

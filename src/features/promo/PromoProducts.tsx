@@ -15,6 +15,7 @@ export default function PromoProducts({
       <div className="text-center text-2xl text-white">No categories found</div>
     );
 
+  // add a Tab.Panel for each category
   const showProducts = (category: number) => {
     return products
       .filter((product) => product.category._ref === categories[category]._id)

@@ -10,6 +10,7 @@ export interface IPromoCheckoutButton {
 export default function PromoCheckoutButton({ product }: IPromoCheckoutButton) {
   const dispatch = useDispatch();
 
+  // add product to basket and toast notification
   const addItemToBasket = async () => {
     dispatch(addToBasket(product));
     const toast = (await import('react-hot-toast')).default;

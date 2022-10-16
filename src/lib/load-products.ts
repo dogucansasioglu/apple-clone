@@ -1,6 +1,7 @@
 import { groq } from 'next-sanity';
 import { sanityClient } from './sanity.server';
 
+// select all products
 const query = groq`*[_type == "product"] {
   ...,
   "image": {
@@ -18,12 +19,4 @@ export async function loadProducts() {
   } else {
     return { products: [] };
   }
-
-  // const data = await res.json();
-  // const products: Product[] = res.products;
-  // if (products) {
-  // return { products };
-  // } else {
-  // return { products: [] };
-  // }
 }

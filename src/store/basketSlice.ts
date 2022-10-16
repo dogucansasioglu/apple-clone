@@ -17,6 +17,7 @@ export const basketSlice = createSlice({
     addToBasket: (state, action: PayloadAction<Product>) => {
       const item = action.payload;
       let notNewItem = false;
+      // check if the item is already in the basket
       const mutatedItems = state.items.map((i) => {
         if (i.product._id === item._id) {
           i.quantity++;
@@ -25,23 +26,26 @@ export const basketSlice = createSlice({
         return i;
       });
       if (notNewItem) {
+        // if it is not a new item, update the quantity
         state.items = mutatedItems;
       } else {
+        // if it is a new item, add it to the basket
         state.items.push({ product: item, quantity: 1 });
       }
     },
     removeFromBasket: (state, action: PayloadAction<string>) => {
       const id = action.payload;
+      // filter out the item with the id
       const itemExists = state.items.find((i) => i.product._id === id);
       if (itemExists) {
         state.items = state.items.filter((i) => i.product._id !== id);
       }
     },
-    // have a reducer for setting the quantity of an item in the basket
     setQuantity: (
       state,
       action: PayloadAction<{ id: string; quantity: number }>
     ) => {
+      // set the quantity of the item with the id
       const { id, quantity } = action.payload;
       const mutatedItems = state.items.map((i) => {
         if (i.product._id === id) {

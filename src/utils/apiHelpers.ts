@@ -2,6 +2,7 @@ export async function fetchPostJSON(
   url: string,
   data?: Record<string, unknown>
 ) {
+  // fetch post request
   try {
     const res = await fetch(url, {
       method: 'POST',
@@ -17,6 +18,7 @@ export async function fetchPostJSON(
     });
     return await res.json();
   } catch (error) {
+    // if there was an error, log the error
     console.log(error);
   }
 }

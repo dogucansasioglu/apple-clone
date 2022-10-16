@@ -4,6 +4,6 @@
 
 @layer base {
   html {
-    @apply font-sans text-gray-800;
+    @apply font-body text-gray-800;
   }
 }

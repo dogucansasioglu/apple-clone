@@ -10,25 +10,30 @@ export default function Loader({ isStorybook }: ILoader) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [parent] = useAutoAnimate<HTMLDivElement>();
+
   useEffect(() => {
-    if (!isStorybook) {
+    if (isStorybook) {
+      // to test the loader component in storybook
+      setLoading(true);
+    } else {
       const handleStart = (url: any) =>
         url !== router.asPath && setLoading(true);
       const handleComplete = (url: any) =>
         url === router.asPath && setLoading(false);
 
+      // listen to router events to show/hide the loader
       router.events.on('routeChangeStart', handleStart);
       router.events.on('routeChangeComplete', handleComplete);
       router.events.on('routeChangeError', handleComplete);
       return () => {
+        // remove the listeners
         router.events.off('routeChangeStart', handleStart);
         router.events.off('routeChangeComplete', handleComplete);
         router.events.off('routeChangeError', handleComplete);
       };
-    } else {
-      setLoading(true);
     }
   }, [isStorybook, router]);
+  
   return (
     <div ref={parent}>
       {loading && (

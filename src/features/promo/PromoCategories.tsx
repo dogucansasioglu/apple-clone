@@ -9,6 +9,7 @@ export default function PromoCategories({ categories }: IPromoCategories) {
     return (
       <div className="text-center text-2xl text-white">No categories found</div>
     );
+
   return (
     <>
       {categories.map((category) => (

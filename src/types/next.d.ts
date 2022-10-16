@@ -2,6 +2,7 @@ import type { NextComponentType, NextPageContext } from 'next';
 import type { Session } from 'next-auth';
 import type { Router } from 'next/router';
 
+// this is a workaround for the fact that next-auth doesn't export the Session type
 declare module 'next/app' {
   type AppProps<P = Record<string, unknown>> = {
     // Component: NextComponentType<NextPageContext, any, P>;
