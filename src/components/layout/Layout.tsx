@@ -1,16 +1,16 @@
-import Header from '@/features/header';
+import Header from '@/components/header';
 import dynamic from 'next/dynamic';
 
-const DynamicFooter = dynamic(() => import('@/features/footer'), {
+const DynamicFooter = dynamic(() => import('@/components/footer'), {
   ssr: false,
   loading: () => <p>Loading...</p>,
 });
 
-export interface IPrimaryLayout {
+export interface ILayout {
   children: React.ReactNode;
 }
 
-const PrimaryLayout = ({ children }: IPrimaryLayout) => {
+const Layout = ({ children }: ILayout) => {
   return (
     <div className="min-h-screen bg-backdrop">
       <Header />
@@ -20,4 +20,4 @@ const PrimaryLayout = ({ children }: IPrimaryLayout) => {
   );
 };
 
-export default PrimaryLayout;
+export default Layout;
