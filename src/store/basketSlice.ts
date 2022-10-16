@@ -74,7 +74,7 @@ export const selectBasketTotal = (state: RootState) => {
     0
   );
 };
-export const basketLength = (state: RootState) => {
+export const selectBasketLength = (state: RootState) => {
   return state.basket.items.length;
 };
 

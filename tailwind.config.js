@@ -40,6 +40,10 @@ module.exports = {
           'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, rgba(156, 163, 175, 0.3), rgba(156, 163, 175, 0.3))',
         'footer-social-hover':
           'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, rgba(156, 163, 175, 0.3) 10%, rgba(156, 163, 175, 0.3))',
+        basket:
+          'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #d1d5db, #d1d5db)',
+        'basket-hover':
+          'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #d1d5db 10%, #d1d5db)',
       },
       backgroundSize: {
         'size-gradient-bg': '0 100%, 100% 100%',

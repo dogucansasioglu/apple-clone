@@ -1,12 +1,12 @@
 import PrimaryButton from '@/components/buttons/PrimaryButton';
-import { basketLength } from '@/store/basketSlice';
+import { selectBasketLength } from '@/store/basketSlice';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 import ShoppingBagIcon from '@heroicons/react/24/outline/ShoppingBagIcon';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
 
 export default function HeaderCheckoutButton() {
-  const length = useSelector(basketLength);
+  const length = useSelector(selectBasketLength);
   const [parent] = useAutoAnimate<HTMLDivElement>();
 
   return (
