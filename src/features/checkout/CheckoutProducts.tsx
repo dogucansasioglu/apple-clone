@@ -1,9 +1,9 @@
+import { selectBasketItems } from '@/store/basketSlice';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
 import { useSelector } from 'react-redux';
-import { selectBasketItems } from '../../../store/basketSlice';
-import CheckoutProduct from './product/CheckoutProduct';
+import CheckoutProduct from './CheckoutProduct';
 
-const CheckoutProducts = () => {
+export default function CheckoutProducts() {
   const items = useSelector(selectBasketItems);
   const [parent] = useAutoAnimate<HTMLDivElement>();
 
@@ -14,6 +14,4 @@ const CheckoutProducts = () => {
       ))}
     </div>
   );
-};
-
-export default CheckoutProducts;
+}

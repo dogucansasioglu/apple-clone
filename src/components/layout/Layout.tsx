@@ -12,9 +12,9 @@ export interface ILayout {
 
 const Layout = ({ children }: ILayout) => {
   return (
-    <div className="min-h-screen bg-backdrop">
+    <div className="flex min-h-screen flex-col bg-backdrop">
       <Header />
-      {children}
+      <div className="flex-auto">{children}</div>
       <DynamicFooter />
     </div>
   );

@@ -3,7 +3,7 @@ import HeaderLinks from './HeaderLinks';
 
 export default function Header() {
   return (
-    <header className="bg-backdrop sticky top-0 z-50 w-full p-5">
+    <header className="sticky top-0 z-50 w-full flex-initial bg-backdrop p-5">
       <nav className="container mx-auto flex items-center justify-between">
         <LogoButton location="header" />
         <HeaderLinks />

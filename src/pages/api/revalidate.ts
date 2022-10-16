@@ -17,18 +17,20 @@ export default async function handler(
   }
 
   try {
-    // check that body is not empty
+    // check for body is not empty
     const body = req.body;
     if (!body) {
       res.status(400).send('Bad request (no body)');
       return;
     }
 
+    // check for the required fields
     const isRevalidate = body.isRevalidate;
     if (!isRevalidate) {
       res.status(400).send('Bad request (no isRevalidate)');
       return;
     }
+    // revalidate the page
     await res.revalidate(`/`);
     return res.json({ revalidated: true });
   } catch (err) {

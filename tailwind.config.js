@@ -26,12 +26,12 @@ module.exports = {
           'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #1f2937, #1f2937)',
         'secondary-hover':
           'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #1f2937 10%, #1f2937)',
+        'secondary-border':
+          'linear-gradient(90deg, #3b82f6 10%, #8b5cf6 50%), linear-gradient(90deg, #1f2937 10%, #1f2937 50%)',
         'gradient-promo':
           'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #35383c, #35383c)',
         'gradient-promo-hover':
           'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #35383c 10%, #1f2937)',
-        'learn-more':
-          'linear-gradient(90deg, #3b82f6 10%, #8b5cf6 50%), linear-gradient(90deg, #1f2937 10%, #1f2937 50%)',
         'footer-link':
           'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, rgba(156, 163, 175, 1), rgba(156, 163, 175, 1))',
         'footer-link-hover':
@@ -44,6 +44,10 @@ module.exports = {
           'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #d1d5db, #d1d5db)',
         'basket-hover':
           'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #d1d5db 10%, #d1d5db)',
+        'checkout-remove':
+          'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #1f2937, #1f2937)',
+        'checkout-remove-hover':
+          'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #1f2937 10%, #1f2937)',
       },
       backgroundSize: {
         'size-gradient-bg': '0 100%, 100% 100%',

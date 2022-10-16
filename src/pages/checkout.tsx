@@ -1,45 +1,25 @@
-import dynamic from 'next/dynamic';
+import { CheckoutDetails, CheckoutTitle } from '@/features/checkout';
 import Head from 'next/head';
-import { Suspense } from 'react';
 import { useSelector } from 'react-redux';
-import CheckoutTitle from '../components/checkout/title/CheckoutTitle';
-import { selectBasketItems } from '../store/basketSlice';
-
-const DynamicCheckoutProducts = dynamic(
-  () => import('../components/checkout/products/CheckoutProducts'),
-  {
-    suspense: true,
-  }
-);
-const DynamicCheckoutInfo = dynamic(
-  () => import('../components/checkout/info/CheckoutInfo'),
-  {
-    suspense: true,
-  }
-);
+import { selectBasketLength } from '../store/basketSlice';
 
 const Checkout = () => {
-  const items = useSelector(selectBasketItems);
+  const basketLength = useSelector(selectBasketLength);
 
   return (
-    <div className="bg-ws min-h-[35vh]">
+    <>
       <Head>
-        <title>Bag - Apple</title>
+        <title>Bag - Equal</title>
       </Head>
 
-      <main className="mx-auto max-w-5xl">
-        <CheckoutTitle length={items.length} />
+      <main className="p-5">
+        <div className="mx-auto max-w-5xl">
+          <CheckoutTitle length={basketLength} />
 
-        {items.length > 0 && (
-          <div className="mx-5 flex flex-col gap-y-1 md:mx-8">
-            <Suspense fallback={<div>Loading...</div>}>
-              <DynamicCheckoutProducts />
-              <DynamicCheckoutInfo />
-            </Suspense>
-          </div>
-        )}
+          {basketLength > 0 && <CheckoutDetails />}
+        </div>
       </main>
-    </div>
+    </>
   );
 };
 

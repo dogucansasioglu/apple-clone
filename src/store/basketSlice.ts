@@ -37,21 +37,15 @@ export const basketSlice = createSlice({
         state.items = state.items.filter((i) => i.product._id !== id);
       }
     },
-    minusBasket: (state, action: PayloadAction<string>) => {
-      const id = action.payload;
-      const mutatedItems = state.items.map((i) => {
-        if (i.product._id === id && i.quantity > 1) {
-          i.quantity--;
-        }
-        return i;
-      });
-      state.items = mutatedItems;
-    },
-    plusBasket: (state, action: PayloadAction<string>) => {
-      const id = action.payload;
+    // have a reducer for setting the quantity of an item in the basket
+    setQuantity: (
+      state,
+      action: PayloadAction<{ id: string; quantity: number }>
+    ) => {
+      const { id, quantity } = action.payload;
       const mutatedItems = state.items.map((i) => {
         if (i.product._id === id) {
-          i.quantity++;
+          i.quantity = quantity;
         }
         return i;
       });
@@ -60,7 +54,7 @@ export const basketSlice = createSlice({
   },
 });
 
-export const { addToBasket, removeFromBasket, minusBasket, plusBasket } =
+export const { addToBasket, removeFromBasket, setQuantity } =
   basketSlice.actions;
 
 // SELECTORS - This is how we pull information from the Global store slice

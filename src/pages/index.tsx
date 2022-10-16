@@ -25,7 +25,7 @@ const Home = ({ categories, products }: IHomePage) => {
   return (
     <>
       <Head>
-        <title>Apple Clone</title>
+        <title>Equal by @sasiogludogucan</title>
       </Head>
 
       <Basket />

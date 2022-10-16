@@ -2,6 +2,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import Stripe from 'stripe';
 import { urlFor } from '../../lib/sanity.server';
+
+// Stripe requires the raw body to construct the event.
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
   apiVersion: '2022-08-01',
 });
@@ -10,10 +12,17 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method === 'POST') {
+  // check for the POST request
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    res.status(405).end('Method Not Allowed');
+  } else {
+    // from the request body, get the product id
     const items: ProductObj[] = req.body.items;
-
+    // from the items, prepare the line items for stripe
+    const images: string[] = [];
     const line_items = items.map((item) => {
+      images.push(urlFor(item.product.image).url() as string);
       return {
         price_data: {
           currency: 'usd',
@@ -27,12 +36,8 @@ export default async function handler(
       };
     });
 
-    const images = items.map((item) => {
-      return urlFor(item.product.image).url();
-    });
-
     try {
-      // Create Checkout Sessions from body params
+      // create a new checkout session
       const params: Stripe.Checkout.SessionCreateParams = {
         payment_method_types: ['card'],
         line_items,
@@ -47,15 +52,14 @@ export default async function handler(
       const checkoutSession: Stripe.Checkout.Session =
         await stripe.checkout.sessions.create(params);
 
+      // return the session id
       res.status(200).json(checkoutSession);
     } catch (err) {
+      // if there was an error, return the error
       console.log(err);
       const errorMessage =
         err instanceof Error ? err.message : 'Internal server error';
       res.status(500).json({ statusCode: 500, message: errorMessage });
     }
-  } else {
-    res.setHeader('Allow', 'POST');
-    res.status(405).end('Method Not Allowed');
   }
 }
