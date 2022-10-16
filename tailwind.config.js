@@ -18,7 +18,6 @@ module.exports = {
       },
       backgroundImage: {
         backdrop: 'linear-gradient(90deg, #E5EAEE, #ECEDEC)',
-        cta: "linear-gradient(rgba(26,26,27, 0.4), rgba(26,26,27,0.4)), url('/cta.jpg') ",
         primary:
           'linear-gradient(90deg, #3b82f6, #8b5cf6), linear-gradient(90deg, #60a5fa, #a78bfa)',
         'primary-hover':

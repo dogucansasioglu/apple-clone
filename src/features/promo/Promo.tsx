@@ -27,7 +27,7 @@ export default function Promo({
       </h1>
 
       <Tab.Group>
-        <Tab.List className="flex justify-center">
+        <Tab.List className="flex justify-center px-5">
           <PromoCategories categories={categories} />
         </Tab.List>
         <Tab.Panels

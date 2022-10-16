@@ -1,3 +1,3 @@
 import Promo from './Promo';
 
-export { Promo };
+export default Promo;
