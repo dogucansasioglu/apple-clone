@@ -2,13 +2,13 @@ import Loader from '@/components/utility/loader';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 
+// adding dynamic import for componets
 const DynamicCheckoutProducts = dynamic(() => import('./CheckoutProducts'), {
   suspense: true,
 });
 const DynamicCheckoutSummary = dynamic(() => import('./CheckoutSummary'), {
   suspense: true,
 });
-
 const DynamicCheckoutButton = dynamic(() => import('./CheckoutButton'), {
   suspense: true,
 });

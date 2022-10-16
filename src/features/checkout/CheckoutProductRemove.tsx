@@ -15,6 +15,7 @@ export default function CheckoutProductRemove({
 }: ICheckoutProductRemove) {
   const dispatch = useDispatch();
 
+  // Remove item from basket and update total price in basket
   const removeItemFromBasket = async () => {
     dispatch(removeFromBasket(id));
     const toast = (await import('react-hot-toast')).default;

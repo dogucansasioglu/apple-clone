@@ -5,6 +5,7 @@ import CheckoutProduct from './CheckoutProduct';
 
 export default function CheckoutProducts() {
   const items = useSelector(selectBasketItems);
+  // useAutoAnimate is a hook that will animate the items in the list
   const [parent] = useAutoAnimate<HTMLDivElement>();
 
   return (

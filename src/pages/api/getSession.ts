@@ -12,7 +12,7 @@ export default async function handler(
 ) {
   // get session id from request body
   const sessionId = req.query.sessionId as string;
-  // get session from stripe
+  // get session from stripe using the session id
   const session = await stripe.checkout.sessions.listLineItems(sessionId);
   // return session
   res.status(200).json({ session });

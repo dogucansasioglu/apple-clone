@@ -10,6 +10,7 @@ export default function CheckoutButton() {
   const [loading, setLoading] = useState(false);
 
   const createCheckoutSession = async () => {
+    // 1. Create a Checkout Session.
     setLoading(true);
     const checkoutSession: StripeSession = await fetchPostJSON(
       '/api/checkout-session',
@@ -17,7 +18,7 @@ export default function CheckoutButton() {
         items,
       }
     );
-
+    // 2. Redirect to Checkout.
     if (checkoutSession) {
       if (checkoutSession.mode !== 'payment') {
         setLoading(false);

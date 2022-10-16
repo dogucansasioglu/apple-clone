@@ -14,6 +14,7 @@ export default function CheckoutProductSelectQuantity({
   const dispatch = useDispatch();
   const [selectedQuantity, setSelectedQuantity] = useState(quantity);
 
+  // Update quantity in basket and update total price in basket
   const handleSelectQuantity = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newQuantity = parseInt(e.target.value);
     setSelectedQuantity(newQuantity);
