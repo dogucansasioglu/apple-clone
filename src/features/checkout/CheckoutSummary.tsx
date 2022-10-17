@@ -1,11 +1,13 @@
+import { fadeYVariants } from '@/components/utility/motion/Variants';
 import { selectBasketTotal } from '@/store/basketSlice';
+import { m } from 'framer-motion';
 import { useSelector } from 'react-redux';
 
 export default function CheckoutSummary() {
   const basketTotal = useSelector(selectBasketTotal);
 
   return (
-    <div className="my-10">
+    <m.div className="my-10" variants={fadeYVariants}>
       <div className="flex justify-between text-lg font-bold">
         <div>
           <p>Subtotal</p>
@@ -15,6 +17,6 @@ export default function CheckoutSummary() {
         </div>
         <p>${basketTotal}</p>
       </div>
-    </div>
+    </m.div>
   );
 }

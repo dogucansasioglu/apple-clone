@@ -15,7 +15,6 @@ export const Base = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 
 Base.args = {
-  isStorybook: true,
   categories: [
     {
       _createdAt: '2022-09-14T21:43:58Z',

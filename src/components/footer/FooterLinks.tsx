@@ -6,10 +6,10 @@ export interface IFooterLinks {
 
 export default function FooterLinks({ links }: IFooterLinks) {
   return (
-    <ol className="space-y-4">
+    <ul className="space-y-4">
       {links.map((link, index) => (
-        <FooterLink key={index} {...link} />
+        <FooterLink {...link} key={index} />
       ))}
-    </ol>
+    </ul>
   );
 }

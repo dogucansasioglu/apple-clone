@@ -1,18 +1,16 @@
 import { selectBasketItems } from '@/store/basketSlice';
-import { useAutoAnimate } from '@formkit/auto-animate/react';
+import { AnimatePresence } from 'framer-motion';
 import { useSelector } from 'react-redux';
 import CheckoutProduct from './CheckoutProduct';
 
 export default function CheckoutProducts() {
   const items = useSelector(selectBasketItems);
-  // useAutoAnimate is a hook that will animate the items in the list
-  const [parent] = useAutoAnimate<HTMLDivElement>();
 
   return (
-    <div ref={parent}>
-      {items.map((item) => (
-        <CheckoutProduct key={item.product._id} item={item} />
+    <AnimatePresence presenceAffectsLayout={true} mode="popLayout">
+      {items.map((item, index) => (
+        <CheckoutProduct key={item.product._id} item={item} index={index} />
       ))}
-    </div>
+    </AnimatePresence>
   );
 }

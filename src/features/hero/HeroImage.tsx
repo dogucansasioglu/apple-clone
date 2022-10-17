@@ -1,3 +1,5 @@
+import { fadeYVariants } from '@/components/utility/motion/Variants';
+import { m } from 'framer-motion';
 import Image from 'next/future/image';
 
 export default function HeroImage() {
@@ -10,7 +12,10 @@ export default function HeroImage() {
   }
 
   return (
-    <div className="right-0 hidden justify-self-end text-right md:inline">
+    <m.div
+      className="right-0 hidden justify-self-end text-right md:inline"
+      variants={fadeYVariants}
+    >
       <Image
         src="/iphone.png"
         priority
@@ -18,6 +23,6 @@ export default function HeroImage() {
         height={imageHeight}
         width={imageWidth}
       />
-    </div>
+    </m.div>
   );
 }

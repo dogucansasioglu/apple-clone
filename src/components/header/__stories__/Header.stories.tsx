@@ -3,7 +3,7 @@ import { SessionProvider } from 'next-auth/react';
 import Header from '../Header';
 
 export default {
-  title: 'features/Header',
+  title: 'components/Header',
   component: Header,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {},

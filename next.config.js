@@ -18,5 +18,5 @@ const withPWA = require('next-pwa')({
 //   enabled: process.env.ANALYZE === 'true',
 // });
 
-// module.exports = withBundleAnalyzer(withPWA(nextConfig));
+// module.exports = withBundleAnalyzer(nextConfig);
 module.exports = withPWA(nextConfig);

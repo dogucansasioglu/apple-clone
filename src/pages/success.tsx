@@ -1,18 +1,25 @@
+import { containerVariants } from '@/components/utility/motion/Variants';
 import { SuccessBody, SuccessButtons, SuccessTitle } from '@/features/success';
+import { m } from 'framer-motion';
 import Head from 'next/head';
 
 const Success = () => {
   return (
     <div className="flex w-full items-start justify-center">
       <Head>
-        <title>Thank you! - Apple</title>
+        <title>Thank you! - Equal</title>
       </Head>
 
-      <main className="max-w-xl space-y-3 p-7">
+      <m.main
+        className="max-w-xl space-y-3 p-7"
+        initial="out"
+        animate="in"
+        variants={containerVariants}
+      >
         <SuccessTitle />
         <SuccessBody />
         <SuccessButtons />
-      </main>
+      </m.main>
     </div>
   );
 };

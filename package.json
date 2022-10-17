@@ -8,9 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write .",
-    "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@formkit/auto-animate": "^1.0.0-beta.3",
@@ -24,6 +24,7 @@
     "@sanity/image-url": "^1.0.1",
     "@stripe/stripe-js": "^1.36.0",
     "csstype": "^3.0.10",
+    "framer-motion": "^7.5.3",
     "next": "12.3.0",
     "next-auth": "^4.10.3",
     "next-auth-sanity": "^1.4.4",

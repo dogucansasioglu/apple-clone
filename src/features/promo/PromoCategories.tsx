@@ -1,4 +1,6 @@
+import { fadeYVariants } from '@/components/utility/motion/Variants';
 import { Tab } from '@headlessui/react';
+import { m } from 'framer-motion';
 
 export interface IPromoCategories {
   categories: Category[];
@@ -13,19 +15,20 @@ export default function PromoCategories({ categories }: IPromoCategories) {
   return (
     <>
       {categories.map((category) => (
-        <Tab
-          key={category._id}
-          id={category._id}
-          className={({ selected }) =>
-            `rounded-t-lg bg-left-bottom bg-no-repeat py-3.5 px-5 outline-none transition-all duration-300 ease-in sm:py-4 sm:px-8 sm:text-lg ${
-              selected
-                ? 'bg-promo bg-gradient-promo-hover bg-size-border-hover text-gray-50'
-                : 'bg-gradient-promo bg-size-border text-gray-500'
-            }`
-          }
-        >
-          {category.title}
-        </Tab>
+        <m.div key={category._id} variants={fadeYVariants}>
+          <Tab
+            id={category._id}
+            className={({ selected }) =>
+              `rounded-t-lg bg-left-bottom bg-no-repeat py-3.5 px-5 outline-none transition-all duration-300 ease-in sm:py-5 sm:px-9 sm:text-lg ${
+                selected
+                  ? 'bg-promo bg-gradient-promo-hover bg-size-border-hover text-gray-50'
+                  : 'bg-gradient-promo bg-size-border text-gray-500'
+              }`
+            }
+          >
+            {category.title}
+          </Tab>
+        </m.div>
       ))}
     </>
   );

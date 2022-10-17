@@ -1,42 +1,34 @@
-import { useAutoAnimate } from '@formkit/auto-animate/react';
+import { containerVariants } from '@/components/utility/motion/Variants';
 import { Tab } from '@headlessui/react';
+import { m } from 'framer-motion';
 import PromoCategories from './PromoCategories';
 import PromoProducts from './PromoProducts';
+import PromoTitle from './PromoTitle';
 
 export interface IPromo {
   products: Product[];
   categories: Category[];
-  isStorybook?: boolean;
 }
 
-export default function Promo({
-  products,
-  categories,
-  isStorybook = false,
-}: IPromo) {
-  const [parent] = useAutoAnimate<HTMLDivElement>();
-
+export default function Promo({ products, categories }: IPromo) {
   return (
-    <section
-      className={`relative z-30 ${
-        isStorybook ? '' : '-mt-[100vh]'
-      } min-h-screen space-y-10 bg-promo-dark py-16`}
+    <m.section
+      className="relative z-30 -mt-[100vh] min-h-screen space-y-10 bg-promo-dark py-16"
+      initial="out"
+      whileInView="in"
+      viewport={{ once: true }}
+      variants={containerVariants}
     >
-      <h1 className="text-center text-4xl font-medium tracking-wide text-white">
-        New Promos
-      </h1>
+      <PromoTitle />
 
       <Tab.Group>
         <Tab.List className="flex justify-center px-5">
           <PromoCategories categories={categories} />
         </Tab.List>
-        <Tab.Panels
-          className="mx-auto max-w-fit pt-10 pb-24 sm:px-5"
-          ref={parent}
-        >
+        <Tab.Panels className="mx-auto max-w-fit pt-10 pb-24 sm:px-5">
           <PromoProducts categories={categories} products={products} />
         </Tab.Panels>
       </Tab.Group>
-    </section>
+    </m.section>
   );
 }

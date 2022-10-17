@@ -1,12 +1,14 @@
 import UserIcon from '@heroicons/react/24/outline/UserIcon';
+import { m } from 'framer-motion';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Image from 'next/future/image';
+import { fadeYVariants } from '../utility/motion/Variants';
 
 export default function HeaderUserButton() {
   const { data: session } = useSession();
 
   return (
-    <>
+    <m.div variants={fadeYVariants}>
       {session ? (
         <Image
           src={session?.user?.image as string}
@@ -22,6 +24,6 @@ export default function HeaderUserButton() {
           onClick={() => signIn()}
         />
       )}
-    </>
+    </m.div>
   );
 }

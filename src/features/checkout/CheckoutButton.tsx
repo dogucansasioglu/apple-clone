@@ -1,7 +1,9 @@
 import PrimaryButton from '@/components/buttons/PrimaryButton';
+import { fadeYVariants } from '@/components/utility/motion/Variants';
 import { selectBasketItems } from '@/store/basketSlice';
 import { fetchPostJSON } from '@/utils/apiHelpers';
 import getStripe from '@/utils/getStripe';
+import { m } from 'framer-motion';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
@@ -36,12 +38,14 @@ export default function CheckoutButton() {
   };
 
   return (
-    <PrimaryButton
-      className="w-full px-8 py-5 text-xl font-semibold"
-      onClick={createCheckoutSession}
-      loading={loading}
-    >
-      Check Out
-    </PrimaryButton>
+    <m.div variants={fadeYVariants}>
+      <PrimaryButton
+        className="w-full px-8 py-5 text-xl font-semibold"
+        onClick={createCheckoutSession}
+        loading={loading}
+      >
+        Check Out
+      </PrimaryButton>
+    </m.div>
   );
 }

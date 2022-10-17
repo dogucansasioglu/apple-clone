@@ -26,7 +26,7 @@ module.exports = {
   core: {
     builder: 'webpack5',
   },
-  webpackFinal: (config) => {
+  webpackFinal: async (config) => {
     /**
      * Add support for alias-imports
      * @see https://github.com/storybookjs/storybook/issues/11989#issuecomment-715524391
@@ -44,6 +44,13 @@ module.exports = {
       path.resolve(__dirname, '../public'),
       'node_modules',
     ];
+
+    // fix for framer motion
+    config.module.rules.push({
+      test: /\.mjs$/,
+      include: /node_modules/,
+      type: 'javascript/auto',
+    });
 
     return config;
   },

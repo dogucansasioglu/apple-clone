@@ -1,4 +1,5 @@
-import Loader from '@/components/utility/loader';
+import { containerVariants } from '@/components/utility/motion/Variants';
+import { m } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 
@@ -15,12 +16,18 @@ const DynamicCheckoutButton = dynamic(() => import('./CheckoutButton'), {
 
 export default function CheckoutDetails() {
   return (
-    <div className="flex flex-col">
-      <Suspense fallback={<Loader />}>
+    <m.div
+      className="flex flex-col"
+      initial="out"
+      animate="in"
+      exit="out"
+      variants={containerVariants}
+    >
+      <Suspense fallback={<div>Loading...</div>}>
         <DynamicCheckoutProducts />
         <DynamicCheckoutSummary />
         <DynamicCheckoutButton />
       </Suspense>
-    </div>
+    </m.div>
   );
 }

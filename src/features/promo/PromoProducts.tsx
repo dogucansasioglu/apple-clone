@@ -1,4 +1,6 @@
+import { containerVariants } from '@/components/utility/motion/Variants';
 import { Tab } from '@headlessui/react';
+import { AnimatePresence, m } from 'framer-motion';
 import PromoProduct from './PromoProduct';
 
 export interface IPromoProducts {
@@ -15,7 +17,7 @@ export default function PromoProducts({
       <div className="text-center text-2xl text-white">No categories found</div>
     );
 
-  // add a Tab.Panel for each category
+  // show the current category's products
   const showProducts = (category: number) => {
     return products
       .filter((product) => product.category._ref === categories[category]._id)
@@ -27,9 +29,20 @@ export default function PromoProducts({
       {categories.map((category, index) => (
         <Tab.Panel
           key={category._id}
-          className="grid auto-rows-[1fr] grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3"
+          // className="grid auto-rows-[1fr] grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3"
         >
-          {showProducts(index)}
+          <AnimatePresence mode="wait">
+            <m.div
+              className="grid auto-rows-[1fr] grid-cols-1 gap-8 lg:grid-cols-2 xl:grid-cols-3"
+              initial="out"
+              whileInView="in"
+              exit="out"
+              viewport={{ once: true }}
+              variants={containerVariants}
+            >
+              {showProducts(index)}
+            </m.div>
+          </AnimatePresence>
         </Tab.Panel>
       ))}
     </>

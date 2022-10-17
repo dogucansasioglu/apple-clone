@@ -1,3 +1,6 @@
+import { containerVariants } from '@/components/utility/motion/Variants';
+import { m } from 'framer-motion';
+
 export interface IFooterContainer {
   children: React.ReactNode;
   className?: string;
@@ -10,8 +13,14 @@ export default function FooterContainer({
   padding = 'lg:pl-5',
 }: IFooterContainer) {
   return (
-    <div className={`flex flex-col text-xl ${padding} ${className}`}>
+    <m.div
+      className={`flex flex-col text-xl ${padding} ${className}`}
+      initial="out"
+      whileInView="in"
+      viewport={{ once: true }}
+      variants={containerVariants}
+    >
       {children}
-    </div>
+    </m.div>
   );
 }

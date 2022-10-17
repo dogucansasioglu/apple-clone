@@ -1,7 +1,8 @@
 import { CheckoutDetails, CheckoutTitle } from '@/features/checkout';
+import { selectBasketLength } from '@/store/basketSlice';
+import { AnimatePresence } from 'framer-motion';
 import Head from 'next/head';
 import { useSelector } from 'react-redux';
-import { selectBasketLength } from '../store/basketSlice';
 
 const Checkout = () => {
   const basketLength = useSelector(selectBasketLength);
@@ -15,8 +16,9 @@ const Checkout = () => {
       <main className="p-5">
         <div className="mx-auto max-w-5xl">
           <CheckoutTitle length={basketLength} />
-
-          {basketLength > 0 && <CheckoutDetails />}
+          <AnimatePresence>
+            {basketLength > 0 && <CheckoutDetails key="checkout" />}
+          </AnimatePresence>
         </div>
       </main>
     </>

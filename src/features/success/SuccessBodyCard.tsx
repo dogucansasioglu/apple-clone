@@ -1,3 +1,6 @@
+import { fadeYVariants } from '@/components/utility/motion/Variants';
+import { m } from 'framer-motion';
+
 export interface ISuccessBodyCard {
   title: string;
   description: string;
@@ -10,10 +13,10 @@ export default function SuccessBodyCard({
   className = '',
 }: ISuccessBodyCard) {
   return (
-    <div className={`${className}`}>
+    <m.div className={className} variants={fadeYVariants}>
       <h2 className="font-medium">{title}</h2>
       <p className="text-sm text-gray-600">{description}</p>
-    </div>
+    </m.div>
   );
 }
 //   return (
