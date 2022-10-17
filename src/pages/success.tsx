@@ -1,7 +1,5 @@
+import { SuccessBody, SuccessButtons, SuccessTitle } from '@/features/success';
 import Head from 'next/head';
-import SuccessBody from '../components/success/body/SuccessBody';
-import SuccessButtons from '../components/success/buttons/SuccessButtons';
-import SuccessThank from '../components/success/thank/SuccessThank';
 
 const Success = () => {
   return (
@@ -11,7 +9,7 @@ const Success = () => {
       </Head>
 
       <main className="max-w-xl space-y-3 p-7">
-        <SuccessThank />
+        <SuccessTitle />
         <SuccessBody />
         <SuccessButtons />
       </main>

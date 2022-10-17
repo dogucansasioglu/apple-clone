@@ -22,8 +22,7 @@ export default function SecondaryButton({
     <button
       className={`${
         withBorder &&
-        borderClassName &&
-        ' bg-secondary-border bg-size-border bg-left-bottom bg-no-repeat transition-all duration-300 ease-in hover:bg-size-border-hover'
+        `${borderClassName} bg-secondary-border bg-size-border bg-left-bottom bg-no-repeat transition-all duration-300 ease-in hover:bg-size-border-hover`
       }`}
       onClick={onClick}
       disabled={disabled}
