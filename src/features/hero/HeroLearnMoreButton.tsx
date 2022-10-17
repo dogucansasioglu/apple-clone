@@ -3,7 +3,7 @@ import SecondaryButton from '@/components/buttons/SecondaryButton';
 export default function HeroLearnMoreButton() {
   return (
     <SecondaryButton
-      className="text-lg font-semibold xl:text-xl"
+      className="bg-secondary text-lg font-semibold hover:bg-secondary-hover xl:text-xl"
       borderClassName="pb-0.5"
     >
       Learn more

@@ -19,7 +19,7 @@ export const Header = Template.bind({});
 Header.args = {
   loading: false,
   children: 'Click me',
-  className: 'p-5',
+  className: 'p-5 bg-secondary hover:bg-secondary-hover',
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   onClick: () => {},
   disabled: false,

@@ -28,7 +28,7 @@ export default function SecondaryButton({
       disabled={disabled}
     >
       <span
-        className={`${className} bg-secondary bg-size-gradient-bg bg-clip-text bg-no-repeat text-transparent transition-all duration-300 ease-in hover:bg-secondary-hover hover:bg-size-gradient-bg-hover`}
+        className={`${className} bg-size-gradient-bg bg-clip-text bg-no-repeat text-transparent transition-all duration-300 ease-in hover:bg-size-gradient-bg-hover`}
       >
         {loading ? 'Loading...' : children}
       </span>

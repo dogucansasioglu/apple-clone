@@ -29,7 +29,7 @@ export default function CheckoutProductRemove({
     <div className="flex flex-col items-end space-y-4">
       <h4 className="text-xl font-medium md:text-2xl">${price}</h4>
       <SecondaryButton
-        className=" font-medium"
+        className=" bg-secondary font-medium hover:bg-secondary-hover"
         withBorder={false}
         onClick={removeItemFromBasket}
       >

@@ -9,7 +9,10 @@ export default function SuccessButtons() {
     <div className="flex items-center justify-between text-sm">
       <p>
         Need help?{' '}
-        <SecondaryButton withBorder={true} className="font-medium">
+        <SecondaryButton
+          withBorder={true}
+          className="bg-secondary font-medium hover:bg-secondary-hover"
+        >
           Contact us!
         </SecondaryButton>
       </p>
