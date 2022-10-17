@@ -4,10 +4,10 @@ import SuccessTitleCheckIcon from './SuccessTitleCheckIcon';
 
 export default function SuccessTitle() {
   const router = useRouter();
-  // get session id from router
-  const { session_id } = router.query;
   // get session data
   const { data: session } = useSession();
+  // get session id from router
+  const { session_id } = router.query;
 
   return (
     <div className="mb-5 flex items-center gap-4">

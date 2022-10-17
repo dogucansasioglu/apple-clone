@@ -40,6 +40,7 @@
     "require-from-string": "^2.0.2",
     "sanity": "^2.33.2",
     "sharp": "^0.31.0",
+    "storybook-addon-next-router": "^4.0.1",
     "stripe": "^10.10.0",
     "webpack": "5"
   },

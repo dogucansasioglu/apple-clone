@@ -18,7 +18,7 @@ export default function SuccessBody() {
         />
       </SuccessBodyCardContainer>
 
-      <SuccessBodyCardContainer>
+      <SuccessBodyCardContainer className="mt-3">
         <SuccessBodyCard
           title="Order updates"
           description="You'll get shipping and delivery updates by email and text"

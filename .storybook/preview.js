@@ -1,4 +1,5 @@
 // @ts-check
+import { RouterContext } from 'next/dist/shared/lib/router-context';
 import * as NextImage from 'next/future/image';
 import React from 'react';
 import { Provider } from 'react-redux';
@@ -30,5 +31,8 @@ export const parameters = {
   },
   previewTabs: {
     'storybook/docs/panel': { index: -1 },
+  },
+  nextRouter: {
+    Provider: RouterContext.Provider,
   },
 };
