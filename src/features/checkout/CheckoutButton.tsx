@@ -3,7 +3,7 @@ import { fadeYVariants } from '@/components/utility/motion/Variants';
 import { selectBasketItems } from '@/store/basketSlice';
 import { fetchPostJSON } from '@/utils/apiHelpers';
 import getStripe from '@/utils/getStripe';
-import { m } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
@@ -38,7 +38,7 @@ export default function CheckoutButton() {
   };
 
   return (
-    <m.div variants={fadeYVariants}>
+    <motion.div variants={fadeYVariants}>
       <PrimaryButton
         className="w-full px-8 py-5 text-xl font-semibold"
         onClick={createCheckoutSession}
@@ -46,6 +46,6 @@ export default function CheckoutButton() {
       >
         Check Out
       </PrimaryButton>
-    </m.div>
+    </motion.div>
   );
 }

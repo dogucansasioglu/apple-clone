@@ -1,5 +1,5 @@
 import { containerVariants } from '@/components/utility/motion/Variants';
-import { m } from 'framer-motion';
+import { motion } from 'framer-motion';
 import CtaBgImage from './CtaBgImage';
 import CtaButton from './CtaButton';
 import CtaInput from './CtaInput';
@@ -7,7 +7,7 @@ import CtaText from './CtaText';
 
 export default function Cta() {
   return (
-    <m.div
+    <motion.div
       className="mt-32 px-5"
       initial="out"
       whileInView="in"
@@ -24,6 +24,6 @@ export default function Cta() {
           </label>
         </div>
       </div>
-    </m.div>
+    </motion.div>
   );
 }

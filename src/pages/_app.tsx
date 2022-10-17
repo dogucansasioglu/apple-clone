@@ -1,6 +1,6 @@
 import PrimaryLayout from '@/components/layout';
 import '@/styles/globals.css';
-import { AnimatePresence, domAnimation, LazyMotion, m } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { SessionProvider } from 'next-auth/react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
@@ -31,29 +31,27 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
     <SessionProvider session={session}>
       <Provider store={store}>
-        <LazyMotion features={domAnimation}>
-          <AnimatePresence mode="wait">
-            <m.div
-              key={router.route}
-              initial="initialState"
-              animate="animateState"
-              exit="exitState"
-              transition={{ duration: 0.75 }}
-              variants={variants}
-            >
-              <Toaster />
-              <PrimaryLayout>
-                <Head>
-                  <meta
-                    name="viewport"
-                    content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
-                  />
-                </Head>
-                <Component {...pageProps} />
-              </PrimaryLayout>
-            </m.div>
-          </AnimatePresence>
-        </LazyMotion>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={router.route}
+            initial="initialState"
+            animate="animateState"
+            exit="exitState"
+            transition={{ duration: 0.75 }}
+            variants={variants}
+          >
+            <Toaster />
+            <PrimaryLayout>
+              <Head>
+                <meta
+                  name="viewport"
+                  content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
+                />
+              </Head>
+              <Component {...pageProps} />
+            </PrimaryLayout>
+          </motion.div>
+        </AnimatePresence>
       </Provider>
     </SessionProvider>
   );

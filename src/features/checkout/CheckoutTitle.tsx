@@ -1,5 +1,5 @@
 import { fadeYVariants } from '@/components/utility/motion/Variants';
-import { m } from 'framer-motion';
+import { motion } from 'framer-motion';
 import CheckoutTitleButton from './CheckoutTitleButton';
 
 export interface ICheckoutTitle {
@@ -8,12 +8,12 @@ export interface ICheckoutTitle {
 
 export default function CheckoutTitle({ length }: ICheckoutTitle) {
   return (
-    <m.div variants={fadeYVariants} initial="out" animate="in">
+    <motion.div variants={fadeYVariants} initial="out" animate="in">
       <h1 className="my-4 text-4xl font-semibold">
         {length > 0 ? 'Your Bag' : 'Your bag is empty'}
       </h1>
       <div className="mt-10 mb-5  border-b border-gray-300"></div>
       <CheckoutTitleButton length={length} />
-    </m.div>
+    </motion.div>
   );
 }

@@ -1,6 +1,6 @@
 import { containerVariants } from '@/components/utility/motion/Variants';
 import { SuccessBody, SuccessButtons, SuccessTitle } from '@/features/success';
-import { m } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Head from 'next/head';
 
 const Success = () => {
@@ -10,7 +10,7 @@ const Success = () => {
         <title>Thank you! - Equal</title>
       </Head>
 
-      <m.main
+      <motion.main
         className="max-w-xl space-y-3 p-7"
         initial="out"
         animate="in"
@@ -19,7 +19,7 @@ const Success = () => {
         <SuccessTitle />
         <SuccessBody />
         <SuccessButtons />
-      </m.main>
+      </motion.main>
     </div>
   );
 };

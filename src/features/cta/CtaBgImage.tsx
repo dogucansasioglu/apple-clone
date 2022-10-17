@@ -1,10 +1,10 @@
 import { fadeYVariants } from '@/components/utility/motion/Variants';
-import { m } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/future/image';
 
 export default function CtaBgImage() {
   return (
-    <m.div
+    <motion.div
       className="absolute top-0 z-10 h-full w-full brightness-50"
       variants={fadeYVariants}
     >
@@ -14,6 +14,6 @@ export default function CtaBgImage() {
         fill
         className="object-cover object-center"
       />
-    </m.div>
+    </motion.div>
   );
 }

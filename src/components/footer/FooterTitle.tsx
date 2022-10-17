@@ -1,5 +1,5 @@
 import { fadeYVariants } from '@/components/utility/motion/Variants';
-import { m } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export interface IFooterTitle {
   children: React.ReactNode;
@@ -7,11 +7,11 @@ export interface IFooterTitle {
 
 export default function FooterTitle({ children }: IFooterTitle) {
   return (
-    <m.h1
+    <motion.h1
       className="pb-4 text-2xl font-semibold text-gray-100 xl:text-3xl"
       variants={fadeYVariants}
     >
       {children}
-    </m.h1>
+    </motion.h1>
   );
 }

@@ -1,5 +1,5 @@
 import { containerVariants } from '@/components/utility/motion/Variants';
-import { m } from 'framer-motion';
+import { motion } from 'framer-motion';
 import HeroButtons from './HeroButtons';
 import HeroImage from './HeroImage';
 import HeroText from './HeroText';
@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <main className="relative h-[200vh] px-5">
       <div className="-translate-y-14">
-        <m.div
+        <motion.div
           initial="out"
           animate="in"
           variants={containerVariants}
@@ -19,7 +19,7 @@ export default function Hero() {
             <HeroButtons />
           </div>
           <HeroImage />
-        </m.div>
+        </motion.div>
       </div>
     </main>
   );

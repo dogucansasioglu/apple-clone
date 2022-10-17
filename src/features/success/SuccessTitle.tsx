@@ -1,5 +1,5 @@
 import { fadeYVariants } from '@/components/utility/motion/Variants';
-import { m } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import SuccessTitleCheckIcon from './SuccessTitleCheckIcon';
@@ -12,7 +12,10 @@ export default function SuccessTitle() {
   const { session_id } = router.query;
 
   return (
-    <m.div className="mb-5 flex items-center gap-4" variants={fadeYVariants}>
+    <motion.div
+      className="mb-5 flex items-center gap-4"
+      variants={fadeYVariants}
+    >
       <SuccessTitleCheckIcon />
       <div>
         <p className="text-sm text-gray-600">Order #{session_id?.slice(-5)}</p>
@@ -20,6 +23,6 @@ export default function SuccessTitle() {
           Thank you {session ? session.user?.name?.split(' ')[0] : 'Guest'}!
         </h4>
       </div>
-    </m.div>
+    </motion.div>
   );
 }

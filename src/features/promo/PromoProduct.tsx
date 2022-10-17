@@ -1,5 +1,5 @@
 import { fadeYVariants } from '@/components/utility/motion/Variants';
-import { m } from 'framer-motion';
+import { motion } from 'framer-motion';
 import PromoCheckoutButton from './PromoCheckoutButton';
 import PromoImage from './PromoImage';
 import PromoText from './PromoText';
@@ -10,7 +10,7 @@ export interface IPromoProduct {
 
 export default function IPromoProduct({ product }: IPromoProduct) {
   return (
-    <m.div
+    <motion.div
       key={product._id}
       className="flex h-full w-[320px] select-none flex-col space-y-3 rounded-xl bg-promo p-8 sm:w-[400px] sm:p-10"
       variants={fadeYVariants}
@@ -21,6 +21,6 @@ export default function IPromoProduct({ product }: IPromoProduct) {
 
         <PromoCheckoutButton product={product} />
       </div>
-    </m.div>
+    </motion.div>
   );
 }

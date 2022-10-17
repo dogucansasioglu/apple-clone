@@ -1,5 +1,5 @@
 import { fadeYVariants } from '@/components/utility/motion/Variants';
-import { m } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/future/image';
 
 export default function HeroImage() {
@@ -12,7 +12,7 @@ export default function HeroImage() {
   }
 
   return (
-    <m.div
+    <motion.div
       className="right-0 hidden justify-self-end text-right md:inline"
       variants={fadeYVariants}
     >
@@ -23,6 +23,6 @@ export default function HeroImage() {
         height={imageHeight}
         width={imageWidth}
       />
-    </m.div>
+    </motion.div>
   );
 }

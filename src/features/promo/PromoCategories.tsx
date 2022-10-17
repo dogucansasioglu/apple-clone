@@ -1,6 +1,6 @@
 import { fadeYVariants } from '@/components/utility/motion/Variants';
 import { Tab } from '@headlessui/react';
-import { m } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export interface IPromoCategories {
   categories: Category[];
@@ -15,7 +15,7 @@ export default function PromoCategories({ categories }: IPromoCategories) {
   return (
     <>
       {categories.map((category) => (
-        <m.div key={category._id} variants={fadeYVariants}>
+        <motion.div key={category._id} variants={fadeYVariants}>
           <Tab
             id={category._id}
             className={({ selected }) =>
@@ -28,7 +28,7 @@ export default function PromoCategories({ categories }: IPromoCategories) {
           >
             {category.title}
           </Tab>
-        </m.div>
+        </motion.div>
       ))}
     </>
   );

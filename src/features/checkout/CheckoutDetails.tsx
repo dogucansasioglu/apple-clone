@@ -1,5 +1,5 @@
 import { containerVariants } from '@/components/utility/motion/Variants';
-import { m } from 'framer-motion';
+import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 
@@ -16,7 +16,7 @@ const DynamicCheckoutButton = dynamic(() => import('./CheckoutButton'), {
 
 export default function CheckoutDetails() {
   return (
-    <m.div
+    <motion.div
       className="flex flex-col"
       initial="out"
       animate="in"
@@ -28,6 +28,6 @@ export default function CheckoutDetails() {
         <DynamicCheckoutSummary />
         <DynamicCheckoutButton />
       </Suspense>
-    </m.div>
+    </motion.div>
   );
 }

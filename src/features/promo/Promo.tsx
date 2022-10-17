@@ -1,6 +1,6 @@
 import { containerVariants } from '@/components/utility/motion/Variants';
 import { Tab } from '@headlessui/react';
-import { m } from 'framer-motion';
+import { motion } from 'framer-motion';
 import PromoCategories from './PromoCategories';
 import PromoProducts from './PromoProducts';
 import PromoTitle from './PromoTitle';
@@ -12,7 +12,7 @@ export interface IPromo {
 
 export default function Promo({ products, categories }: IPromo) {
   return (
-    <m.section
+    <motion.section
       className="relative z-30 -mt-[100vh] min-h-screen space-y-10 bg-promo-dark py-16"
       initial="out"
       whileInView="in"
@@ -29,6 +29,6 @@ export default function Promo({ products, categories }: IPromo) {
           <PromoProducts categories={categories} products={products} />
         </Tab.Panels>
       </Tab.Group>
-    </m.section>
+    </motion.section>
   );
 }

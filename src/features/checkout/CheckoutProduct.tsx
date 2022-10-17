@@ -1,5 +1,5 @@
 import { fadeVariants } from '@/components/utility/motion/Variants';
-import { m } from 'framer-motion';
+import { motion } from 'framer-motion';
 import React from 'react';
 import ProductImage from './CheckoutProductImage';
 import ProductRemove from './CheckoutProductRemove';
@@ -16,7 +16,7 @@ export interface ICheckoutProduct {
 const CheckoutProduct = React.forwardRef<HTMLDivElement, ICheckoutProduct>(
   ({ item, index }, ref) => {
     return (
-      <m.div
+      <motion.div
         ref={ref}
         className="flex flex-col gap-x-4 border-b border-gray-300 py-5 sm:flex-row sm:items-center"
         key={item.product._id}
@@ -41,7 +41,7 @@ const CheckoutProduct = React.forwardRef<HTMLDivElement, ICheckoutProduct>(
             price={item.product.price * item.quantity}
           />
         </div>
-      </m.div>
+      </motion.div>
     );
   }
 );

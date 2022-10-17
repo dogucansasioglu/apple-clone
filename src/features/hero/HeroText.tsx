@@ -1,9 +1,9 @@
 import { fadeYVariants } from '@/components/utility/motion/Variants';
-import { m } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export default function HeroText() {
   return (
-    <m.h1
+    <motion.h1
       className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl"
       variants={fadeYVariants}
     >
@@ -15,6 +15,6 @@ export default function HeroText() {
         <br />
         Driven By Values
       </span>
-    </m.h1>
+    </motion.h1>
   );
 }
