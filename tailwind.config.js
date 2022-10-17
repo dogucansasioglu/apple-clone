@@ -14,7 +14,6 @@ module.exports = {
       colors: {
         promo: '#35383c',
         'promo-dark': '#1A1A1B',
-        ws: '#e7ecee',
       },
       backgroundImage: {
         backdrop: 'linear-gradient(90deg, #E5EAEE, #ECEDEC)',
